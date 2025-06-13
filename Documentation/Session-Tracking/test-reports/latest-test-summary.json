@@ -1,0 +1,74 @@
+{
+  "testRunId": "auth-tests-2025-06-12-21-34",
+  "timestamp": "2025-06-12T21:34:18.177Z",
+  "duration": 30887.753,
+  "totalTests": 4,
+  "results": {
+    "expected": 1,
+    "unexpected": 3,
+    "skipped": 0,
+    "flaky": 0
+  },
+  "testSuite": "Authentication Tests",
+  "browser": "chromium",
+  "failures": [
+    {
+      "testName": "Admin login flow",
+      "error": "TimeoutError: page.waitForURL: Timeout 10000ms exceeded",
+      "errorDetails": "waiting for navigation to \"**/admin/dashboard\" until \"load\", navigated to \"http://localhost:3000/admin\"",
+      "duration": 14635,
+      "screenshot": "test-results/auth-Authentication-Tests-Admin-login-flow-chromium/test-failed-1.png",
+      "pageState": "Stuck on login page with 'Signing in...' button disabled",
+      "rootCause": "Authentication successful but navigation failed - router.push doesn't trigger middleware"
+    },
+    {
+      "testName": "User login flow", 
+      "error": "TimeoutError: page.waitForURL: Timeout 10000ms exceeded",
+      "errorDetails": "waiting for navigation to \"**/users/dashboard\" until \"load\"",
+      "duration": 15176,
+      "screenshot": "test-results/auth-Authentication-Tests-User-login-flow-chromium/test-failed-1.png",
+      "pageState": "Form filled correctly, but no navigation occurred",
+      "rootCause": "Same navigation issue as admin login"
+    },
+    {
+      "testName": "Session persistence",
+      "error": "Test timeout of 30000ms exceeded",
+      "errorDetails": "page.waitForURL: Test timeout exceeded waiting for admin dashboard",
+      "duration": 30138,
+      "screenshot": "test-results/auth-Authentication-Tests-Session-persistence-chromium/test-failed-1.png",
+      "pageState": "Admin login page with 'Signing in...' state",
+      "rootCause": "Same navigation issue affects session persistence test"
+    }
+  ],
+  "successfulTests": [
+    {
+      "testName": "Protected route access",
+      "duration": 4598,
+      "status": "passed",
+      "description": "Correctly redirects to login when accessing protected routes without authentication"
+    }
+  ],
+  "technicalFindings": {
+    "supabaseConnection": "WORKING - verified with debug script",
+    "adminUserExists": "YES - ID: 6aeb3460-f4d2-4601-aca4-c4b9aec51581, Role: admin",
+    "middlewareLogic": "CORRECT - properly blocks unauthorized access",
+    "authenticationAPI": "WORKING - login succeeds in backend tests",
+    "frontendIssue": "Navigation method incompatible with middleware auth flow"
+  },
+  "fixApplied": {
+    "description": "Changed router.push() to window.location.href for forced page refresh",
+    "files": ["app/admin/page.tsx", "app/users/page.tsx"],
+    "reasoning": "window.location.href triggers full page reload, allowing middleware to run auth checks"
+  },
+  "nextTestRun": "PENDING - Will run after cleanup phase completion",
+  "cleanupPhase": {
+    "status": "IN_PROGRESS",
+    "description": "Removing PWA system and Persian content before next test run",
+    "expectedTasks": [
+      "Remove Serwist PWA configurations",
+      "Convert Persian content to English",
+      "Simplify Turbopack configuration",
+      "Update project documentation"
+    ]
+  }
+}

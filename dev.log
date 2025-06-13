@@ -1,0 +1,125 @@
+
+> cherrygifts-chat@0.1.0 dev
+> next dev --turbo
+
+   ▲ Next.js 15.3.3 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.31.205:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Compiled middleware in 169ms
+ ✓ Ready in 1000ms
+middleware_get_user: 1.195ms
+Middleware: Proceeding with request
+middleware_execution: 1.691ms
+ ○ Compiling / ...
+ ✓ Compiled / in 4.8s
+ GET / 200 in 5595ms
+middleware_get_user: 0.458ms
+Middleware: Proceeding with request
+middleware_execution: 0.907ms
+middleware_get_user: 0.293ms
+Middleware: No user, redirecting to /admin login
+middleware_execution: 0.52ms
+middleware_get_user: 0.404ms
+Middleware: Proceeding with request
+middleware_execution: 0.812ms
+middleware_get_user: 0.422ms
+Middleware: Proceeding with request
+middleware_execution: 0.752ms
+middleware_get_user: 0.578ms
+Middleware: Proceeding with request
+middleware_execution: 0.944ms
+ ○ Compiling /admin ...
+ ✓ Compiled /admin in 2.5s
+ GET /admin 200 in 2686ms
+ GET /admin 200 in 2678ms
+ GET /admin 200 in 2662ms
+ GET /users 200 in 2726ms
+middleware_get_user: 0.25ms
+Middleware: No user, redirecting to /admin login
+middleware_execution: 0.462ms
+middleware_get_user: 0.199ms
+Middleware: Proceeding with request
+middleware_execution: 0.391ms
+ GET /admin 200 in 64ms
+middleware_get_user: 0.353ms
+Middleware: No user, redirecting to /admin login
+middleware_execution: 0.561ms
+middleware_get_user: 0.293ms
+Middleware: Proceeding with request
+middleware_execution: 0.561ms
+ GET /admin 200 in 51ms
+middleware_get_user: 0.313ms
+Middleware: Proceeding with request
+middleware_execution: 0.647ms
+ ✓ Compiled /admin in 62ms
+ GET /admin 200 in 146ms
+middleware_get_user: 0.414ms
+Middleware: Proceeding with request
+middleware_execution: 0.741ms
+ GET /admin 200 in 101ms
+middleware_get_user: 0.31ms
+Middleware: Proceeding with request
+middleware_execution: 0.614ms
+ GET /admin 200 in 84ms
+ ✓ Compiled in 1616ms
+middleware_get_user: 0.445ms
+Middleware: Proceeding with request
+middleware_execution: 0.782ms
+middleware_get_user: 0.264ms
+Middleware: Proceeding with request
+middleware_execution: 0.362ms
+middleware_get_user: 0.658ms
+Middleware: No user, redirecting to /admin login
+middleware_execution: 0.764ms
+middleware_get_user: 0.361ms
+Middleware: Proceeding with request
+middleware_execution: 0.538ms
+middleware_get_user: 0.244ms
+Middleware: Proceeding with request
+middleware_execution: 0.398ms
+ ✓ Compiled /users in 24ms
+ GET /admin 200 in 871ms
+ GET /admin 200 in 871ms
+ GET /admin 200 in 838ms
+ GET /users 200 in 843ms
+middleware_get_user: 0.415ms
+Middleware: No user, redirecting to /admin login
+middleware_execution: 1.403ms
+middleware_get_user: 0.385ms
+Middleware: Proceeding with request
+middleware_execution: 0.706ms
+ GET /admin 200 in 128ms
+middleware_get_user: 0.168ms
+Middleware: No user, redirecting to /admin login
+middleware_execution: 0.294ms
+middleware_get_user: 0.155ms
+Middleware: Proceeding with request
+middleware_execution: 0.233ms
+ GET /admin 200 in 100ms
+middleware_get_user: 0.455ms
+Middleware: Proceeding with request
+middleware_execution: 1.655ms
+ ✓ Compiled /admin in 32ms
+ GET /admin 200 in 410ms
+middleware_get_user: 0.477ms
+Middleware: Proceeding with request
+middleware_execution: 0.943ms
+ GET /admin 200 in 100ms
+middleware_get_user: 0.34ms
+Middleware: Proceeding with request
+middleware_execution: 0.591ms
+ GET /admin 200 in 58ms
+ ✓ Compiled in 864ms
+middleware_get_user: 0.303ms
+Middleware: Proceeding with request
+middleware_execution: 1.21ms
+ ○ Compiling /sentry-test ...
+ ✓ Compiled /sentry-test in 1761ms
+ GET /sentry-test 200 in 1820ms
+ ✓ Compiled in 804ms
+ ✓ Compiled in 836ms
+ ✓ Compiled in 772ms
+[?25h

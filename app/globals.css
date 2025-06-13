@@ -1,0 +1,836 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #262626;
+  
+  /* Instagram Blue Variants - Updated to match HTML design */
+  --ig-blue: #1379f5;
+  --ig-blue-light: #B2DFFC;
+  --ig-blue-dark: #0084D6;
+  --ig-blue-hover: #1d82f5;
+  
+  /* Instagram Gray Scale - Updated to match HTML design */
+  --ig-gray-50: #f8f9fa;
+  --ig-gray-100: #e7edf4;
+  --ig-gray-200: #cedae9;
+  --ig-gray-300: #C7C7C7;
+  --ig-gray-400: #48709d;
+  --ig-gray-500: #737373;
+  --ig-gray-600: #565656;
+  --ig-gray-700: #365314;
+  --ig-gray-800: #0d141c;
+  --ig-gray-900: #000000;
+  
+  /* Instagram Accent Colors - Updated to match HTML design */
+  --ig-white: #FFFFFF;
+  --ig-black: #0d141c;
+  --ig-red: #ED4956;
+  --ig-green: #4AB557;
+  --ig-yellow: #FFDC00;
+  --ig-purple: #8E44AD;
+}
+
+/* Global font family - English by default */
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Persian font for specific elements */
+.font-vazir {
+  font-family: 'Vazirmatn', 'Tahoma', sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  
+  /* Instagram Blue Color Scale */
+  --color-instagram-blue: var(--ig-blue);
+  --color-instagram-blue-light: var(--ig-blue-light);
+  --color-instagram-blue-dark: var(--ig-blue-dark);
+  --color-instagram-blue-hover: var(--ig-blue-hover);
+  
+  /* Instagram Gray Color Scale */
+  --color-instagram-gray-50: var(--ig-gray-50);
+  --color-instagram-gray-100: var(--ig-gray-100);
+  --color-instagram-gray-200: var(--ig-gray-200);
+  --color-instagram-gray-300: var(--ig-gray-300);
+  --color-instagram-gray-400: var(--ig-gray-400);
+  --color-instagram-gray-500: var(--ig-gray-500);
+  --color-instagram-gray-600: var(--ig-gray-600);
+  --color-instagram-gray-700: var(--ig-gray-700);
+  --color-instagram-gray-800: var(--ig-gray-800);
+  --color-instagram-gray-900: var(--ig-gray-900);
+  
+  /* Instagram Accent Colors */
+  --color-instagram-white: var(--ig-white);
+  --color-instagram-black: var(--ig-black);
+  --color-instagram-red: var(--ig-red);
+  --color-instagram-green: var(--ig-green);
+  --color-instagram-yellow: var(--ig-yellow);
+  --color-instagram-purple: var(--ig-purple);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
+}
+
+/* Mobile-specific styles */
+html {
+  -webkit-text-size-adjust: 100%;
+  touch-action: manipulation;
+}
+
+/* Responsive design utilities */
+@media (max-width: 640px) {
+  .mobile-hide {
+    display: none !important;
+  }
+  
+  .mobile-full-width {
+    width: 100vw !important;
+  }
+  
+  .mobile-padding {
+    padding: 1rem !important;
+  }
+}
+
+@media (min-width: 641px) {
+  .desktop-hide {
+    display: none !important;
+  }
+}
+
+/* Touch-friendly sizing */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Smooth scrolling with momentum */
+.momentum-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Pull to refresh styles */
+.pull-refresh-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Swipe gesture indicators */
+.swipe-indicator {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.swipe-indicator.left {
+  right: 1rem;
+}
+
+.swipe-indicator.right {
+  left: 1rem;
+}
+
+/* Safe area handling for notched devices */
+.safe-area-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.safe-area-left {
+  padding-left: env(safe-area-inset-left);
+}
+
+.safe-area-right {
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Prevent iOS bounce effect */
+.no-bounce {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+/* Smooth scrolling */
+.smooth-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Remove tap highlight */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Instagram gradients */
+.gradient-instagram-blue {
+  background: linear-gradient(135deg, var(--ig-blue) 0%, var(--ig-blue-dark) 100%);
+}
+
+.gradient-instagram-gray {
+  background: linear-gradient(135deg, var(--ig-gray-100) 0%, var(--ig-gray-200) 100%);
+}
+
+.gradient-instagram-subtle {
+  background: linear-gradient(135deg, var(--ig-gray-50) 0%, var(--ig-white) 100%);
+}
+
+/* Instagram glassmorphism */
+.glass-instagram {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--ig-gray-200);
+}
+
+/* Instagram Typography Scale */
+.text-ig-xs {
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.text-ig-sm {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.text-ig-base {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.text-ig-md {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.text-ig-lg {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.text-ig-xl {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.text-ig-2xl {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+/* Instagram Spacing System */
+.space-ig-1 { margin: 2px; }
+.space-ig-2 { margin: 4px; }
+.space-ig-3 { margin: 6px; }
+.space-ig-4 { margin: 8px; }
+.space-ig-5 { margin: 12px; }
+.space-ig-6 { margin: 16px; }
+.space-ig-8 { margin: 24px; }
+.space-ig-10 { margin: 32px; }
+
+/* Instagram Border Radius */
+.rounded-ig { border-radius: 18px; }
+.rounded-ig-sm { border-radius: 4px; }
+.rounded-ig-md { border-radius: 8px; }
+.rounded-ig-lg { border-radius: 12px; }
+.rounded-ig-xl { border-radius: 20px; }
+
+/* Instagram Shadows */
+.shadow-ig-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.shadow-ig {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.shadow-ig-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-ig-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Instagram Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* iOS/Android Native Animations */
+@keyframes iosSlideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes iosSlideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-30%);
+  }
+}
+
+@keyframes androidScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes smoothBounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rubberBand {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes typingDots {
+  0%, 20% {
+    color: var(--ig-gray-300);
+    transform: scale(1);
+  }
+  50% {
+    color: var(--ig-gray-500);
+    transform: scale(1.2);
+  }
+  100% {
+    color: var(--ig-gray-300);
+    transform: scale(1);
+  }
+}
+
+@keyframes reactionPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-30deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes messageSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes statusUpdate {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes reactionPickerSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-100%) scale(1);
+  }
+}
+
+@keyframes scale-out {
+  0% {
+    opacity: 1;
+    transform: translateY(-100%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%) scale(0.8);
+  }
+}
+
+/* Animation Classes */
+.animate-slide-up {
+  animation: slideUp 0.2s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(90deg, var(--ig-gray-100) 0%, var(--ig-gray-200) 50%, var(--ig-gray-100) 100%);
+  background-size: 200px 100%;
+}
+
+.animate-heart-beat {
+  animation: heartBeat 0.6s ease-in-out;
+}
+
+.animate-typing-dots {
+  animation: typingDots 1.4s infinite;
+}
+
+.animate-reaction-pop {
+  animation: reactionPop 0.3s ease-out;
+}
+
+.animate-message-slide-in {
+  animation: messageSlideIn 0.3s ease-out;
+}
+
+.animate-status-update {
+  animation: statusUpdate 0.2s ease-out;
+}
+
+.animate-reaction-picker-slide {
+  animation: reactionPickerSlide 0.2s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.2s ease-out forwards;
+}
+
+.animate-scale-out {
+  animation: scale-out 0.15s ease-in forwards;
+}
+
+/* iOS/Android Animation Classes */
+.animate-ios-slide-in {
+  animation: iosSlideIn 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animate-ios-slide-out {
+  animation: iosSlideOut 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animate-android-scale-in {
+  animation: androidScaleIn 0.225s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-smooth-bounce {
+  animation: smoothBounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.animate-rubber-band {
+  animation: rubberBand 0.7s ease-in-out;
+}
+
+.animate-pulse {
+  animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Instagram Transitions */
+.transition-ig {
+  transition: all 0.2s ease;
+}
+
+/* Native App Transitions */
+.transition-ios {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.transition-android {
+  transition: all 0.225s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Spring Physics Transitions */
+.transition-spring {
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Will-change for performance */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.transition-ig-colors {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.transition-ig-transform {
+  transition: transform 0.2s ease;
+}
+
+.transition-ig-opacity {
+  transition: opacity 0.2s ease;
+}
+
+/* Hover and Press States */
+.hover-ig:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}
+
+.press-ig:active {
+  opacity: 0.7;
+  transform: scale(0.98);
+  transition: all 0.1s ease;
+}
+
+/* Instagram Message Bubble Styles */
+.message-bubble-ig {
+  border-radius: 18px;
+  padding: 8px 12px;
+  max-width: 70%;
+  word-wrap: break-word;
+  position: relative;
+}
+
+.message-bubble-ig.sent {
+  background: var(--ig-blue);
+  color: white;
+  border-bottom-right-radius: 4px;
+  margin-left: auto;
+  margin-right: 8px;
+}
+
+.message-bubble-ig.received {
+  background: var(--ig-gray-100);
+  color: var(--ig-black);
+  border-bottom-left-radius: 4px;
+  margin-right: auto;
+  margin-left: 8px;
+}
+
+/* Instagram Input Styles */
+.input-ig {
+  background: var(--ig-gray-50);
+  border: 1px solid var(--ig-gray-200);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.input-ig:focus {
+  outline: none;
+  border-color: var(--ig-blue);
+  background: white;
+}
+
+/* Instagram Button Styles */
+.btn-ig {
+  background: var(--ig-blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-ig:hover {
+  background: var(--ig-blue-hover);
+}
+
+.btn-ig:disabled {
+  background: var(--ig-blue-light);
+  cursor: not-allowed;
+}
+
+.btn-ig-secondary {
+  background: transparent;
+  color: var(--ig-black);
+  border: 1px solid var(--ig-gray-200);
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-ig-secondary:hover {
+  background: var(--ig-gray-50);
+}
+
+/* Page Transition Animations */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.page-transition-exit-active {
+  opacity: 0.3;
+  transform: translateX(-30%);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Micro-interactions */
+.micro-press {
+  transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+.micro-press:active {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
+
+.micro-hover {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.micro-hover:hover {
+  transform: translateY(-2px);
+}
+
+/* Message Send Animation */
+.message-send {
+  animation: messageSend 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes messageSend {
+  0% {
+    transform: scale(0.8) translateY(10px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Loading Dots Animation */
+.loading-dots span {
+  display: inline-block;
+  animation: loadingDot 1.4s infinite ease-in-out;
+}
+
+.loading-dots span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loading-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loadingDot {
+  0%, 60%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  30% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}
+
+/* 60fps Performance Optimization */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+  
+  .smooth-60fps {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+}
+
+/* Haptic Feedback Simulation */
+.haptic-light:active {
+  animation: hapticLight 0.1s ease;
+}
+
+.haptic-medium:active {
+  animation: hapticMedium 0.15s ease;
+}
+
+.haptic-heavy:active {
+  animation: hapticHeavy 0.2s ease;
+}
+
+@keyframes hapticLight {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(0.99); }
+}
+
+@keyframes hapticMedium {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(0.97); }
+}
+
+@keyframes hapticHeavy {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+}
