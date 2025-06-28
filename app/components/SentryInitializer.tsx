@@ -8,7 +8,7 @@ export function SentryInitializer() {
     // Always initialize Sentry in development, or if NEXT_PUBLIC_SENTRY_ENABLED is true, or in production
     if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'production' || process.env.NEXT_PUBLIC_SENTRY_ENABLED === 'true') {
       Sentry.init({
-        dsn: "https://3179da9c078565b8682aa3f466390b16@o4509331430113280.ingest.de.sentry.io/4509474585116752",
+        dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
         debug: true, // Always enable debug mode in development, can be conditional for production
         tracesSampleRate: 1.0, // Capture 100% of transactions for performance monitoring
         // Set `tracePropagationTargets` to control for which URLs distributed tracing should be enabled
