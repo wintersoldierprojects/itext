@@ -87,6 +87,7 @@ CREATE TABLE reactions (
 ## 🔐 Environment Configuration
 
 ### .env.local
+Copy `.env.example` to `.env.local` and update the values.
 ```bash
 # Supabase Configuration
 NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
