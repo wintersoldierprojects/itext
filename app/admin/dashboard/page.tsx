@@ -30,8 +30,7 @@ export default function AdminDashboard() {
 
   // Intersection observer for infinite scroll
   const loadMoreRef = useRef<HTMLDivElement>(null)
-  const entry = useIntersectionObserver(loadMoreRef, {})
-  const isIntersecting = entry?.isIntersecting
+  const { entry, isIntersecting } = useIntersectionObserver(loadMoreRef)
 
   useEffect(() => {
     const fetchAdminUserAndConversations = async () => {
