@@ -11,7 +11,7 @@ Complete technical specifications and configuration guide for the Instagram DM r
 
 ## 🛠 Tech Stack
 
-- **Frontend**: Next.js 14 (App Router) + TypeScript
+- **Frontend**: Next.js 15.3.3 (App Router) + TypeScript
 - **Styling**: Tailwind CSS + Custom Instagram Design System  
 - **Backend**: Supabase (PostgreSQL + Realtime + Auth)
 - **Animations**: CSS transitions + Custom easing curves
