@@ -3,16 +3,16 @@
 import { useEffect, useState, RefObject } from 'react'
 
 interface UseIntersectionObserverProps {
-  elementRef: RefObject<HTMLElement | null>
   threshold?: number | number[]
   root?: Element | null
   rootMargin?: string
   freezeOnceVisible?: boolean
 }
 
-export function useIntersectionObserver(loadMoreRef: RefObject<HTMLDivElement | null>, p0: {}, {
-  elementRef, threshold = 0, root = null, rootMargin = '0%', freezeOnceVisible = false
-}: UseIntersectionObserverProps) {
+export function useIntersectionObserver(
+  elementRef: RefObject<HTMLElement | null>,
+  { threshold = 0, root = null, rootMargin = '0%', freezeOnceVisible = false }: UseIntersectionObserverProps = {}
+) {
   const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null)
   const [isIntersecting, setIsIntersecting] = useState(false)
 
