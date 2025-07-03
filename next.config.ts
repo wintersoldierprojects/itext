@@ -29,10 +29,10 @@ const nextConfig: NextConfig = {
 
   // TypeScript and ESLint configuration
   typescript: {
-    ignoreBuildErrors: true, // Enable for better development experience
+    ignoreBuildErrors: false,
   },
   eslint: {
-    ignoreDuringBuilds: true, // Enable for better code quality
+    ignoreDuringBuilds: false,
   },
 
   // Experimental features for optimization

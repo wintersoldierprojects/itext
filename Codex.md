@@ -49,7 +49,7 @@ pkill -f "next.*dev"
 sudo fuser -k 3000/tcp           # Force kill port 3000
 pkill -f "next.*dev"             # Kill Next.js processes
 lsof -i :3000                    # Check what's using port 3000
-yarn dlx tsc --noEmit                 # Check TypeScript errors
+yarn tsc --noEmit                # Check TypeScript errors
 ```
 
 ## 🔑 Test Credentials

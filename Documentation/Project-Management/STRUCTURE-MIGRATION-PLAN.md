@@ -178,7 +178,7 @@ ls -la | head -10
 ### **Functionality Verification**:
 - [ ] `yarn dev` starts without cd command
 - [ ] Admin login works at `localhost:3000/admin`
-- [ ] TypeScript compilation works: `yarn dlx tsc --noEmit`
+- [ ] TypeScript compilation works: `yarn tsc --noEmit`
 - [ ] Build process works: `yarn build`
 
 ### **Documentation Updates**:
