@@ -1,98 +1,13 @@
 /**
- * Internationalization utilities for Persian/English support
+ * Internationalization utilities (English only)
  */
 
-import { format as formatJalali, formatDistanceToNow as formatDistanceToNowJalali } from 'date-fns-jalali'
 import { format as formatGregorian, formatDistanceToNow as formatDistanceToNowGregorian } from 'date-fns'
 
-export type Locale = 'fa' | 'en'
+export type Locale = 'en'
 
 // Translation dictionary
 const translations = {
-  fa: {
-    // Common
-    loading: 'در حال بارگذاری...',
-    error: 'خطا',
-    success: 'موفق',
-    cancel: 'لغو',
-    confirm: 'تأیید',
-    save: 'ذخیره',
-    edit: 'ویرایش',
-    delete: 'حذف',
-    search: 'جستجو',
-    
-    // Authentication
-    login: 'ورود',
-    logout: 'خروج',
-    register: 'ثبت‌نام',
-    username: 'نام کاربری',
-    password: 'رمز عبور',
-    pin: 'رمز ۴ رقمی',
-    instagramUsername: 'نام کاربری اینستاگرام',
-    
-    // User Interface
-    startChat: 'شروع گفتگو',
-    adminPortal: 'ورود مدیریت',
-    sendMessage: 'ارسال پیام',
-    typeMessage: 'پیامی بنویسید...',
-    typing: 'در حال تایپ...',
-    online: 'آنلاین',
-    offline: 'آفلاین',
-    lastSeen: 'آخرین بازدید',
-    
-    // Chat Interface
-    messageStatus: {
-      sent: 'ارسال شده',
-      delivered: 'تحویل داده شده',
-      read: 'خوانده شده'
-    },
-    
-    // Admin Dashboard
-    conversations: 'گفتگوها',
-    allConversations: 'همه گفتگوها',
-    unreadMessages: 'پیام‌های خوانده نشده',
-    searchConversations: 'جستجو در گفتگوها',
-    markAsRead: 'علامت‌گذاری به عنوان خوانده شده',
-    
-    // Errors
-    errors: {
-      networkError: 'خطای شبکه. لطفاً اتصال اینترنت خود را بررسی کنید.',
-      validationError: 'اطلاعات وارد شده صحیح نیست.',
-      usernameRequired: 'نام کاربری اینستاگرام الزامی است',
-      usernameInvalid: 'نام کاربری اینستاگرام معتبر نیست',
-      usernameNotFound: 'نام کاربری اینستاگرام یافت نشد',
-      pinRequired: 'رمز ۴ رقمی الزامی است',
-      pinInvalid: 'رمز باید ۴ رقم باشد',
-      loginFailed: 'ورود ناموفق. لطفاً دوباره تلاش کنید.',
-      messageFailed: 'ارسال پیام ناموفق بود',
-      connectionLost: 'اتصال قطع شد'
-    },
-    
-    // Time & Date
-    time: {
-      now: 'اکنون',
-      minuteAgo: 'یک دقیقه پیش',
-      minutesAgo: 'دقیقه پیش',
-      hourAgo: 'یک ساعت پیش',
-      hoursAgo: 'ساعت پیش',
-      dayAgo: 'دیروز',
-      daysAgo: 'روز پیش',
-      weekAgo: 'یک هفته پیش',
-      weeksAgo: 'هفته پیش'
-    },
-    
-    // Features
-    features: {
-      realTimeMessaging: 'پیام‌رسانی سریع',
-      readReceipts: 'تیک‌های خوانده شده',
-      mobileFriendly: 'موبایل دوست'
-    },
-    
-    // App Info
-    appName: 'چت چری گیفت',
-    appDescription: 'پیام‌رسان مدرن با طراحی آشنای اینستاگرام',
-    connectInstantly: 'اتصال فوری با ما'
-  },
   
   en: {
     // Common
@@ -181,7 +96,7 @@ const translations = {
 }
 
 // Current locale state
-let currentLocale: Locale = 'fa' // Default to Persian
+let currentLocale: Locale = 'en'
 
 // Get current locale
 export function getLocale(): Locale {
@@ -194,7 +109,7 @@ export function setLocale(locale: Locale): void {
   
   // Update document direction
   if (typeof document !== 'undefined') {
-    document.documentElement.dir = locale === 'fa' ? 'rtl' : 'ltr'
+    document.documentElement.dir = 'ltr'
     document.documentElement.lang = locale
   }
 }
@@ -209,11 +124,7 @@ export function t(key: string, locale?: Locale): string {
     if (value && typeof value === 'object' && k in value) {
       value = (value as Record<string, unknown>)[k] as Record<string, unknown> | string
     } else {
-      // Fallback to English if key not found in Persian
-      if (lang === 'fa') {
-        return t(key, 'en')
-      }
-      return key // Return key if not found in any language
+      return key
     }
   }
   
@@ -223,54 +134,13 @@ export function t(key: string, locale?: Locale): string {
 // Format date with locale support
 export function formatDate(date: Date | string, pattern: string = 'PPP', locale?: Locale): string {
   const dateObj = typeof date === 'string' ? new Date(date) : date
-  const lang = locale || currentLocale
-  
-  if (lang === 'fa') {
-    return formatJalali(dateObj, pattern)
-  } else {
-    return formatGregorian(dateObj, pattern)
-  }
+  return formatGregorian(dateObj, pattern)
 }
 
 // Format relative time with locale support
 export function formatRelativeTime(date: Date | string, locale?: Locale): string {
   const dateObj = typeof date === 'string' ? new Date(date) : date
-  const lang = locale || currentLocale
-  
-  if (lang === 'fa') {
-    return formatDistanceToNowJalali(dateObj, { addSuffix: true })
-  } else {
-    return formatDistanceToNowGregorian(dateObj, { addSuffix: true })
-  }
-}
-
-// Persian number conversion
-export function toPersianNumbers(input: string | number): string {
-  const persianDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']
-  return String(input).replace(/[0-9]/g, (digit) => persianDigits[parseInt(digit)])
-}
-
-// English number conversion
-export function toEnglishNumbers(input: string): string {
-  const persianDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']
-  let result = input
-  
-  persianDigits.forEach((persianDigit, index) => {
-    result = result.replace(new RegExp(persianDigit, 'g'), index.toString())
-  })
-  
-  return result
-}
-
-// Check if current locale is RTL
-export function isRTL(locale?: Locale): boolean {
-  const lang = locale || currentLocale
-  return lang === 'fa'
-}
-
-// Get direction for CSS
-export function getDirection(locale?: Locale): 'rtl' | 'ltr' {
-  return isRTL(locale) ? 'rtl' : 'ltr'
+  return formatDistanceToNowGregorian(dateObj, { addSuffix: true })
 }
 
 // Hook for React components
@@ -281,10 +151,8 @@ export function useTranslation() {
     setLocale,
     formatDate,
     formatRelativeTime,
-    toPersianNumbers,
-    toEnglishNumbers,
-    isRTL: isRTL(),
-    direction: getDirection()
+    isRTL: false,
+    direction: 'ltr'
   }
 }
 
@@ -293,18 +161,12 @@ export function initializeLocale(): void {
   if (typeof window !== 'undefined') {
     // Check localStorage first
     const savedLocale = localStorage.getItem('cherrygifts-locale') as Locale
-    if (savedLocale && (savedLocale === 'fa' || savedLocale === 'en')) {
+    if (savedLocale === 'en') {
       setLocale(savedLocale)
       return
     }
-    
-    // Check browser language
-    const browserLang = navigator.language.toLowerCase()
-    if (browserLang.startsWith('fa') || browserLang.startsWith('ir')) {
-      setLocale('fa')
-    } else {
-      setLocale('en')
-    }
+
+    setLocale('en')
   }
 }
 
