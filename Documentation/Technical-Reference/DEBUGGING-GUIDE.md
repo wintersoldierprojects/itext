@@ -1,8 +1,10 @@
 # 🐛 CherryGifts Chat - Critical Issue Debugging Guide
 
 **Last Updated**: June 9, 2025  
-**Status**: 🚨 **CRITICAL ISSUES DETECTED**  
+**Status**: 🚨 **CRITICAL ISSUES DETECTED**
 **Focus**: Admin login loops, database timeouts, webpack errors
+
+> **Note**: Actual API credentials must be supplied via environment variables.
 
 ---
 
@@ -89,7 +91,7 @@ time node -e "
 const { createClient } = require('@supabase/supabase-js');
 const supabase = createClient(
   'https://tlgiqnqdtnowmciilnba.supabase.co',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRsZ2lxbnFkdG5vd21jaWlsbmJhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk0MTg5ODIsImV4cCI6MjA2NDk5NDk4Mn0.qF2w9StacVZZj7U578N_HrhGbsZvEPASBThaJkWjzYI'
+  '<SUPABASE_ANON_KEY>'
 );
 
 (async () => {
@@ -102,6 +104,8 @@ const supabase = createClient(
 })();
 "
 ```
+
+> **Note**: Replace `<SUPABASE_ANON_KEY>` with your actual token via environment variables (for example, `NEXT_PUBLIC_SUPABASE_ANON_KEY`).
 
 **Expected Results**:
 - ✅ Query time: <100ms
