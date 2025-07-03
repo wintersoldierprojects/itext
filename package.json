@@ -13,22 +13,13 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
-    "@hookform/resolvers": "^5.1.0",
-    "@shtse8/filesystem-mcp": "^0.5.8",
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.50.0",
     "date-fns": "^4.1.0",
-    "date-fns-jalali": "^4.1.0-0",
     "dotenv": "^16.5.0",
-    "lucide-react": "^0.513.0",
     "next": "15.3.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-hook-form": "^7.57.0",
-    "react-intersection-observer": "^9.16.0",
-    "react-intl": "^7.1.11",
-    "tailwindcss-rtl": "^0.9.0",
-    "zod": "^3.25.56"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
