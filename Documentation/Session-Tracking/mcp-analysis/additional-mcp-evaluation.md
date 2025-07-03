@@ -270,7 +270,6 @@ ENHANCED_ELITE_WORKFLOW {
 2. Context7 MCP - Up-to-date documentation
 3. Exa MCP - Intelligent web search & research
 4. BrowserStack MCP - Multi-device testing
-5. Sentry MCP - Error tracking & performance monitoring
 6. Supabase MCP - Database management & backend operations
 7. Shrimp Task Manager MCP - Enterprise task management (UPGRADED)
 8. Perplexity MCP - AI-powered research & documentation

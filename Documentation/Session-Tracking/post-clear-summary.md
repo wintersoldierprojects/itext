@@ -5,10 +5,6 @@
 
 ## ✅ **COMPLETED SETUP**
 
-2. **Context7 MCP** - `yarn dlx @smithery/cli@latest run @upstash/context7-mcp --key [API_KEY]`
-3. **Exa MCP** - `yarn dlx @smithery/cli@latest run exa --key [API_KEY]`
-4. **BrowserStack MCP** - `yarn dlx @smithery/cli@latest run @browserstack/mcp-server --key [API_KEY]`
-5. **Sentry MCP** - `yarn dlx mcp-remote@latest https://mcp.sentry.dev/sse`
 6. **Supabase MCP** - `/home/eren/.local/bin/supabase-mcp-server`
 7. **Software Planning MCP** - `node /home/eren/Documents/Cline/MCP/Software-planning-mcp/build/index.js`
 8. **Perplexity MCP** - `node /home/eren/Documents/Cline/MCP/perplexity-mcp/build/index.js`

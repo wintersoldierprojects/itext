@@ -265,14 +265,6 @@ yarn build  # 10x faster compilation
 - Touch interaction validation on mobile devices
 - Debug browser-specific issues and rendering problems
 - Performance monitoring across different hardware configurations
-
-#### 5. **Sentry MCP** - Error Tracking & Performance Monitoring
-**Location**: Remote MCP via `yarn dlx mcp-remote@latest https://mcp.sentry.dev/sse`
-**Purpose**: Real-time error tracking, performance monitoring, and issue resolution
-**Status**: ✅ ACTIVE
-
-**All Available Tools**:
-- `find_issues`: Search and analyze application errors and performance issues
 - `begin_seer_issue_fix`: AI-powered automatic issue resolution
 - `find_transactions`: Performance monitoring and transaction analysis
 
@@ -425,7 +417,6 @@ yarn build  # 10x faster compilation
 
 **Execution Protocol**:
 1. **Deploy ALL RELEVANT MCPs Sequentially** (Method 1) - Each creates their own analysis AND solution idea:
-   - **Sentry MCP**: Technical error detection + proposed monitoring/alerting fixes
    - **Sequential Thinking MCP**: Systematic problem decomposition + logical solution approach
    - **Perplexity MCP**: Research-based analysis + industry best practice solutions
    - **Shrimp Task Manager MCP**: Risk assessment + systematic debugging workflow + fix prioritization
@@ -451,7 +442,6 @@ yarn build  # 10x faster compilation
 
 #### **Error Detection & Resolution Chain**:
 2. **BrowserStack MCP**: Validate fixes across real devices and browsers
-3. **Sentry MCP**: Monitor for runtime errors and performance issues
 4. **Perplexity MCP**: Research solutions for complex problems
 5. **Sequential Thinking MCP**: Break down complex debugging scenarios
 6. **Auto-fix and re-test**: Apply fixes and run through entire chain again
@@ -478,7 +468,6 @@ Each MCP should write results to separate markdown sections:
 ✅ **Context7 MCP** - ACTIVE - Up-to-date documentation  
 ✅ **Exa MCP** - ACTIVE - Intelligent web search & research  
 ✅ **BrowserStack MCP** - ACTIVE - Multi-device testing  
-✅ **Sentry MCP** - ACTIVE - Error tracking & performance monitoring  
 ✅ **Supabase MCP** - ACTIVE - Database management & backend operations  
 ✅ **Perplexity MCP** - ACTIVE - AI-powered research & documentation  
 ✅ **Sequential Thinking MCP** - ACTIVE - Advanced problem solving & analysis  
@@ -513,7 +502,6 @@ TASK_EXECUTION_FRAMEWORK {
 
 **Phase 3: Comprehensive Testing Chain**
 - **BrowserStack MCP**: Cross-device and accessibility testing
-- **Sentry MCP**: Error monitoring and performance analysis
 
 **Phase 4: Error Resolution & Optimization**
 - **Perplexity MCP**: Research advanced solutions for complex issues
