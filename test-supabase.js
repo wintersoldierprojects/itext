@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
 const { createClient } = require('@supabase/supabase-js')
+require('dotenv').config()
 
-// Supabase configuration
-const supabaseUrl = 'https://tlgiqnqdtnowmciilnba.supabase.co'
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRsZ2lxbnFkdG5vd21jaWlsbmJhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk0MTg5ODIsImV4cCI6MjA2NDk5NDk4Mn0.qF2w9StacVZZj7U578N_HrhGbsZvEPASBThaJkWjzYI'
+// Supabase configuration (values loaded from environment variables)
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
 const supabase = createClient(supabaseUrl, supabaseKey)
 

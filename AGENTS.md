@@ -2,6 +2,28 @@
 
 **Important:** Read `Codex.md` first. After reviewing all other documentation, return to this `AGENTS.md` for AI-specific guidance when sending requests to AI agents.
 
+## User-provided Custom Instructions (07/03 - 14:07 UTC)
+
+This section outlines operational rules for OpenAI Codex when working in this repository.
+
+### ✅ High-Level Rules
+- **Use RAG-style workflow per task**: Parse AGENTS.md before and after each prompt. Work within context and never re-download the entire repo.
+- **Concurrent agents**: Separate agents handle Coding, Security, QA, CI/CD, and System-Architecture tasks in parallel.
+- **Code quality by default**: Generate modular, linted, type-safe code with tests and passing CI/CD.
+- **Consistency & standards**: Follow naming conventions, formatting guidelines, and PR protocols from this file.
+- **Logging & citations**: Provide terminal logs, test reports, and code change citations.
+
+### 🔧 Task Execution Flow
+1. **Initialize**: Load AGENTS.md and Codex.md.
+2. **Spawn agents**: Start parallel agents for each domain.
+3. **Run RAG retrieval**: Gather relevant code and docs before generating patches.
+4. **Validate**: Lint, type-check, run tests, and execute CI/CD.
+5. **Commit**: Submit clean diffs with clear commit messages and a "Testing Done" summary.
+6. **End state**: Output a summary log with validation results and citations.
+
+---
+
+These instructions apply to both AGENTS.md and Codex.md to ensure secure and efficient collaboration.
 ## What is Agents.md?
 
 Agents.md is a specialized documentation file designed to guide OpenAI Codex and other AI agents in understanding and working with your codebase. Created specifically to enhance AI code generation, Agents.md provides context-specific information about your project's structure, conventions, and requirements.
@@ -60,7 +82,7 @@ Follow these steps to effectively implement Agents.md in your projects to maximi
 
     All changes to shared files or main must go through a PR.
 
-    PRs will be auto-accepted and merged if:
+    PRs will be auto-squash-merged if:
 
         They have no conflicts,
 
@@ -115,6 +137,11 @@ Follow these steps to effectively implement Agents.md in your projects to maximi
     All agents must strictly follow these rules for safe, scalable collaboration.
 
     Violation may result in agent disablement or code rollback.
+
+### Workspace Persistence Tips (07/03 - 14:07 UTC)
+- Codex sessions may reset without warning. Commit and push your feature branch before ending a session.
+- Use `git stash` for temporary work if you cannot commit.
+- Frequent pushes keep your workflow similar to a local environment and protect progress.
 
 # Next.js React Redux TypeScript Development Guide
 
@@ -1082,6 +1109,11 @@ export const logger = {
 
 ## Changelog
 
+### v1.0.1 (2025-07-03 - 14:07 UTC)
+
+- Added user-provided Codex operational instructions.
+- Documented workspace persistence tips and updated PR automation note.
+
 ### v1.0.0 (2024-12-19)
 
 - Initial release of Next.js React Redux TypeScript development guide
@@ -1092,4 +1124,3 @@ export const logger = {
 ---
 
 **Note**: This guide is based on the latest stable versions of Next.js, React, and TypeScript. Please adjust configurations and examples according to your specific project requirements and the versions you are using. Always refer to the official documentation for the most up-to-date information.
-
