@@ -18,7 +18,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "CherryGifts Chat - Instagram-Style Messaging",
   description: "Modern real-time messaging platform with Instagram-familiar interface",
-  manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
