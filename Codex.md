@@ -34,13 +34,13 @@ Instagram DM-Style Messaging Platform - Simplified Clean Build
 
 ```bash
 # Development with Clean Turbopack (RECOMMENDED)
-npm run dev  # Uses clean Turbopack build
+yarn dev  # Uses clean Turbopack build
 
 # Development with debugging
-DEBUG=cherrygifts:* npm run dev
+DEBUG=cherrygifts:* yarn dev
 
 # Build for production (with Turbopack)
-npm run build && npm run start
+yarn build && yarn start
 
 # Force kill processes if needed
 pkill -f "next.*dev"
@@ -116,10 +116,10 @@ cherrygifts-chat/
 ### 1. Turbopack Build System (NEW)
 ```bash
 # Default development (Turbopack)
-npm run dev  # Uses --turbo flag automatically
+yarn dev  # Uses --turbo flag automatically
 
 # Production builds
-npm run build  # 10x faster compilation
+yarn build  # 10x faster compilation
 ```
 
 ### 2. Mock Conversation System (NEW)
@@ -152,7 +152,7 @@ npm run build  # 10x faster compilation
 
 ## 🛠 Development Guidelines
 
-1. **Use Clean Turbopack** - `npm run dev` (faster builds, no PWA)
+1. **Use Clean Turbopack** - `yarn dev` (faster builds, no PWA)
 2. **English Only** - All content must be en-US, no RTL or Persian
 3. **Basic Supabase** - Simple cache and sessions, no complex persistence
 4. **Never create new .md files** - Update existing ones only
@@ -753,25 +753,23 @@ TASK_EXECUTION_FRAMEWORK {
 
 
 ```bash
-cd cherrygifts-chat && npm install
+cd cherrygifts-chat && yarn install
 
-# Run automated test & fix system
-npx ts-node scripts/auto-test-fix.ts
 
 # Run specific test suites
-npm run test                    # All tests
-npm run test auth.spec.ts      # Auth tests only
-npm run test chat.spec.ts      # Chat tests only
-npm run test -- --headed       # Run with browser visible
+yarn test                    # All tests
+yarn test auth.spec.ts      # Auth tests only
+yarn test chat.spec.ts      # Chat tests only
+yarn test -- --headed       # Run with browser visible
 
 # Interactive test UI
-npm run test:ui
+yarn test:ui
 
 # Debug failing tests
-npm run test:debug
+yarn test:debug
 
 # Generate and view test report
-npm run test:report
+yarn test:report
 
 ```
 
@@ -947,16 +945,16 @@ async function testNewChatFeature() {
 
 ```bash
 # Development with clean Turbopack (default)
-npm run dev                 # Clean Turbopack build
+yarn dev                 # Clean Turbopack build
 
 # Build for production
-npm run build              # Clean production build
+yarn build              # Clean production build
 
 # Test locally
-npm run start              # Serves built app
+yarn start              # Serves built app
 
 # Debug development
-DEBUG=cherrygifts:* npm run dev
+DEBUG=cherrygifts:* yarn dev
 ```
 
 ## 🔐 Authentication Flow (Working)
