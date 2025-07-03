@@ -49,7 +49,7 @@ pkill -f "next.*dev"
 sudo fuser -k 3000/tcp           # Force kill port 3000
 pkill -f "next.*dev"             # Kill Next.js processes
 lsof -i :3000                    # Check what's using port 3000
-yarn dlx tsc --noEmit                 # Check TypeScript errors
+yarn tsc --noEmit                 # Check TypeScript errors
 ```
 
 ## 🔑 Test Credentials
@@ -196,7 +196,7 @@ yarn build  # 10x faster compilation
 
 ### 🎭 **10 Elite MCP Servers Configured for Professional Web Development**
 #### 2. **Context7 MCP** - Up-to-date Documentation & Code Examples
-**Command**: `yarn dlx @smithery/cli@latest run @upstash/context7-mcp --key [API_KEY]`
+**Command**: `npx @smithery/cli@latest run @upstash/context7-mcp --key [API_KEY]`
 **Purpose**: Real-time access to current library documentation, API references, and code examples
 
 **All Available Tools**:
@@ -217,7 +217,7 @@ yarn build  # 10x faster compilation
 **Usage**: Add "use context7" to any question about libraries, frameworks, or APIs
 
 #### 3. **Exa MCP** - Intelligent Web Search & Research Engine
-**Command**: `yarn dlx @smithery/cli@latest run exa --key [API_KEY]`
+**Command**: `npx @smithery/cli@latest run exa --key [API_KEY]`
 **Purpose**: Advanced web search, academic research, and competitive analysis using AI-powered search
 
 **All Available Tools**:
@@ -243,7 +243,7 @@ yarn build  # 10x faster compilation
 - Find performance optimization techniques and benchmarks
 
 #### 4. **BrowserStack MCP** - Multi-Device Testing & Accessibility
-**Command**: `yarn dlx @smithery/cli@latest run @browserstack/mcp-server --key [API_KEY]`
+**Command**: `npx @smithery/cli@latest run @browserstack/mcp-server --key [API_KEY]`
 **Purpose**: Real device testing, cross-browser validation, and accessibility compliance
 
 **All Available Tools**:

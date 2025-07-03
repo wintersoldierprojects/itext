@@ -9,7 +9,7 @@
 6. **Supabase MCP** - `/home/eren/.local/bin/supabase-mcp-server`
 7. **Software Planning MCP** - `node /home/eren/Documents/Cline/MCP/Software-planning-mcp/build/index.js`
 8. **Perplexity MCP** - `node /home/eren/Documents/Cline/MCP/perplexity-mcp/build/index.js`
-9. **Sequential Thinking MCP** - `yarn dlx @modelcontextprotocol/server-sequential-thinking`
+9. **Sequential Thinking MCP** - `npx @modelcontextprotocol/server-sequential-thinking`
 
 ### **Elite Developer MCP Orchestration Framework**:
 - ✅ Complete documentation in Codex.md

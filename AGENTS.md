@@ -233,7 +233,7 @@ nextjs-project/
 
 ```bash
 # 1. Create Next.js project with TypeScript
-yarn dlx create-next-app@latest my-nextjs-app --typescript --tailwind --eslint --app
+npx create-next-app@latest my-nextjs-app --typescript --tailwind --eslint --app
 
 # 2. Navigate to project directory
 cd my-nextjs-app
@@ -246,7 +246,7 @@ yarn add dompurify next-i18next
 yarn add -D @types/dompurify
 
 # 4. Install Shadcn UI
-yarn dlx shadcn-ui@latest init
+npx shadcn-ui@latest init
 
 # 5. Start development server
 yarn dev
