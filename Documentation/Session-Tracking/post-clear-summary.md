@@ -5,6 +5,7 @@
 
 ## ✅ **COMPLETED SETUP**
 
+
 6. **Supabase MCP** - `/home/eren/.local/bin/supabase-mcp-server`
 7. **Software Planning MCP** - `node /home/eren/Documents/Cline/MCP/Software-planning-mcp/build/index.js`
 8. **Perplexity MCP** - `node /home/eren/Documents/Cline/MCP/perplexity-mcp/build/index.js`
