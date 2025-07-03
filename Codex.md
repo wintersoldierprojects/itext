@@ -1,4 +1,4 @@
-# 🤖 CLAUDE.md - Development Guidance
+# 🤖 Codex.md - Development Guidance
 
 Instagram DM-Style Messaging Platform - Simplified Clean Build
 
@@ -13,17 +13,15 @@ Instagram DM-Style Messaging Platform - Simplified Clean Build
 
 ## 🏰 **DOCUMENTATION FORTRESS - ORGANIZED KNOWLEDGE BASE**
 
-**All project documentation is now centrally organized in `Documentation/` folder for optimal Claude Code accuracy.**
 
 ### **Essential Documentation Locations**:
-- **This File**: `/CLAUDE.md` - Primary project guide (always read first)
+- **This File**: `/Codex.md` - Primary project guide (always read first)
 - **Progress Tracking**: `Documentation/Project-Management/progress.md` 
 - **Technical Setup**: `Documentation/Technical-Reference/TECHNICAL-SETUP.md`
 - **Elite MCP Framework**: `Documentation/Development-Framework/ELITE-DEVELOPER-ORCHESTRATION-FRAMEWORK.md`
 - **Debugging Guide**: `Documentation/Technical-Reference/DEBUGGING-GUIDE.md`
 - **Current Context**: `Documentation/Project-Management/activeContext.md`
 
-### **📋 CLAUDE CODE DOCUMENTATION RULES**:
 1. **ALWAYS read** `Documentation/README.md` for complete folder structure
 2. **NEW .md files** MUST go in appropriate `Documentation/` subfolders
 3. **Cross-reference** related documents using relative paths
@@ -197,38 +195,6 @@ npm run build  # 10x faster compilation
 ## 🤖 MCP SERVERS & TOOLS FOR CHERRYGIFTS CHAT DEVELOPMENT
 
 ### 🎭 **10 Elite MCP Servers Configured for Professional Web Development**
-
-**IMPORTANT**: All servers below are ACTIVE in Claude Code CLI and ready for elite developer automation.
-
-#### 1. **Playwright MCP** - Advanced Browser Testing & Automation
-**Location**: `/home/eren/Documents/Cline/MCP/mcp-playwright/dist/index.js`
-**Purpose**: Complete E2E testing, visual regression, cross-browser validation, and automated UI testing
-
-**All Available Tools**:
-- **Navigation**: `playwright_navigate`, `playwright_go_back`, `playwright_go_forward`
-- **Interaction**: `playwright_click`, `playwright_fill`, `playwright_hover`, `playwright_drag`
-- **Advanced Interaction**: `playwright_iframe_click`, `playwright_iframe_fill`, `playwright_select`
-- **Keyboard Input**: `playwright_press_key`, `playwright_click_and_switch_tab`
-- **Visual Testing**: `playwright_screenshot`, `playwright_get_visible_text`, `playwright_get_visible_html`
-- **Code Generation**: `start_codegen_session`, `end_codegen_session`, `get_codegen_session`, `clear_codegen_session`
-- **JavaScript Execution**: `playwright_evaluate`, `playwright_console_logs`
-- **HTTP Testing**: `playwright_get`, `playwright_post`, `playwright_put`, `playwright_patch`, `playwright_delete`
-- **Response Validation**: `playwright_expect_response`, `playwright_assert_response`
-- **Browser Config**: `playwright_custom_user_agent`, `playwright_close`
-- **Export**: `playwright_save_as_pdf`
-
-**Professional Use Cases**:
-- E2E testing for authentication flows, dashboard functionality
-- Visual regression testing for UI component libraries
-- Cross-browser compatibility validation
-- Mobile responsiveness testing on various viewports
-- API endpoint testing and validation
-- Performance monitoring and debugging
-- Automated test generation and maintenance
-- User interaction simulation and validation
-- Error detection and debugging workflows
-- Multi-language content testing and validation
-
 #### 2. **Context7 MCP** - Up-to-date Documentation & Code Examples
 **Command**: `npx -y @smithery/cli@latest run @upstash/context7-mcp --key [API_KEY]`
 **Purpose**: Real-time access to current library documentation, API references, and code examples
@@ -436,7 +402,6 @@ npm run build  # 10x faster compilation
 ### 🔧 **MCP Integration Philosophy for Professional Development**
 
 #### **Multi-Layer Testing & Validation Strategy**:
-**Primary Testing Chain**: Playwright → BrowserStack → Sentry (if issues found)
 **Research Chain**: Context7 → Exa → Perplexity (for deeper analysis)
 **Enterprise Planning Chain**: Sequential Thinking → Shrimp Task Manager → Supabase MCP (for implementation)
 **Memory & Learning Chain**: Mem0 Memory → Context retrieval → Enhanced decision making
@@ -452,7 +417,6 @@ npm run build  # 10x faster compilation
 2. **Research Phase**: Context7 + Exa + Perplexity → Comprehensive understanding (Method 1)
 3. **Planning Phase**: Sequential Thinking + Shrimp Task Manager → Enterprise strategy (Method 2)
 4. **Implementation Phase**: Supabase MCP + Context7 → Backend with current best practices
-5. **Testing Phase**: Playwright + BrowserStack + Sentry → Comprehensive validation (Method 1)
 6. **Learning Phase**: Mem0 Memory → Store insights and decisions for future projects
 7. **Quality Assurance**: Cross-validate results between all relevant MCPs
 
@@ -464,7 +428,6 @@ npm run build  # 10x faster compilation
    - **Sentry MCP**: Technical error detection + proposed monitoring/alerting fixes
    - **Sequential Thinking MCP**: Systematic problem decomposition + logical solution approach
    - **Perplexity MCP**: Research-based analysis + industry best practice solutions
-   - **Playwright MCP**: User experience testing + UI/functional fix recommendations
    - **Shrimp Task Manager MCP**: Risk assessment + systematic debugging workflow + fix prioritization
    - **Context7 MCP**: Current documentation analysis + modern fix approaches
    - **Supabase MCP**: Database/backend analysis + data integrity solutions
@@ -473,7 +436,6 @@ npm run build  # 10x faster compilation
    - **Mem0 Memory MCP**: Past similar issues + proven solution patterns
 
 2. **Each MCP Writes to Same File**: Problem analysis + their unique solution approach
-3. **Claude Analysis & Solution Synthesis**: 
    - Filter best elements from each MCP's solution
    - Identify root cause consensus
    - Merge compatible solutions or choose optimal approach
@@ -488,7 +450,6 @@ npm run build  # 10x faster compilation
 **Key Benefit**: All 10 expert perspectives + multiple solution testing ensures problem resolution through comprehensive coverage and systematic fallback validation
 
 #### **Error Detection & Resolution Chain**:
-1. **Playwright MCP**: Detect UI/functional issues during testing
 2. **BrowserStack MCP**: Validate fixes across real devices and browsers
 3. **Sentry MCP**: Monitor for runtime errors and performance issues
 4. **Perplexity MCP**: Research solutions for complex problems
@@ -498,8 +459,6 @@ npm run build  # 10x faster compilation
 #### **Documentation Strategy with Multiple MCPs**:
 Each MCP should write results to separate markdown sections:
 ```markdown
-## Playwright MCP Analysis
-[Playwright findings and test results]
 
 ## BrowserStack MCP Validation  
 [BrowserStack cross-device validation results]
@@ -516,8 +475,6 @@ Each MCP should write results to separate markdown sections:
 
 ## 🏆 **ELITE DEVELOPER MCP ORCHESTRATION FRAMEWORK**
 
-### **MCP Server Status** (Currently Active in Claude Code):
-✅ **Playwright MCP** - ACTIVE - Browser testing & automation  
 ✅ **Context7 MCP** - ACTIVE - Up-to-date documentation  
 ✅ **Exa MCP** - ACTIVE - Intelligent web search & research  
 ✅ **BrowserStack MCP** - ACTIVE - Multi-device testing  
@@ -536,7 +493,6 @@ TASK_EXECUTION_FRAMEWORK {
   1. IDENTIFY_TASK(task) → Find all MCPs capable of contributing
   2. PARALLEL_EXECUTION() → All relevant MCPs work simultaneously  
   3. CONSOLIDATE_RESULTS() → Merge findings into single analysis file
-  4. CLAUDE_ANALYSIS() → Analyze consolidated results for patterns/consensus
   5. DECISION_MAKING() → Continue to next MCP chain OR mark complete
   6. NEXT_ACTION() → Execute decision and repeat cycle
 }
@@ -549,29 +505,22 @@ TASK_EXECUTION_FRAMEWORK {
 - **Exa MCP**: Research competitive solutions and design patterns  
 - **Perplexity MCP**: Deep technical analysis and API research
 - **Sequential Thinking MCP**: Break down complex requirements
-- **→ Claude Analysis**: Compare findings, identify consensus, plan implementation
 
 **Phase 2: Implementation & Validation**
 - **Supabase MCP**: Database schema and backend implementation
 - **Context7 MCP**: Verify current implementation patterns
 - **Software Planning MCP**: Track progress and manage tasks
-- **→ Claude Analysis**: Validate implementation against research, proceed to testing
 
 **Phase 3: Comprehensive Testing Chain**
-- **Playwright MCP**: E2E testing and UI validation
 - **BrowserStack MCP**: Cross-device and accessibility testing
 - **Sentry MCP**: Error monitoring and performance analysis
-- **→ Claude Analysis**: Consolidate test results, identify issues, decide on fixes
 
 **Phase 4: Error Resolution & Optimization**
-- **Playwright MCP**: Re-test after fixes
 - **Perplexity MCP**: Research advanced solutions for complex issues
 - **Sequential Thinking MCP**: Debug complex problems systematically
 - **BrowserStack MCP**: Validate fixes across all platforms
-- **→ Claude Analysis**: Confirm resolution, mark phase complete
 
 #### **Consolidated Reporting System**:
-All MCP results written to: `.claude-session/mcp-analysis/[task-id].md`
 
 ```markdown
 # Task: [TASK_NAME] - Multi-MCP Analysis Report
@@ -591,7 +540,6 @@ All MCP results written to: `.claude-session/mcp-analysis/[task-id].md`
 ### Sequential Thinking MCP Results
 [Problem decomposition and strategy]
 
-## Claude Analysis - Phase 1
 **Consensus Found**: [Y/N]
 **Key Findings**: [Summary]
 **Next Action**: [Continue to Phase 2/Need more research/etc.]
@@ -599,10 +547,8 @@ All MCP results written to: `.claude-session/mcp-analysis/[task-id].md`
 ## Phase 2: Implementation
 [Similar structure for implementation MCPs]
 
-## Claude Analysis - Phase 2
 [Analysis and next steps]
 
-## Final Claude Decision
 **Task Status**: [COMPLETED/CONTINUE/ESCALATE]
 **Quality Score**: [1-10]
 **Next Phase**: [Testing/Optimization/New Task]
@@ -610,7 +556,6 @@ All MCP results written to: `.claude-session/mcp-analysis/[task-id].md`
 
 #### **Elite Developer Decision Matrix**:
 ```typescript
-CLAUDE_DECISION_LOGIC {
   if (all_mcps_agree && quality_high) {
     → MARK_COMPLETE()
   }
@@ -637,20 +582,15 @@ CLAUDE_DECISION_LOGIC {
 - **Coverage**: % of task aspects validated by multiple MCPs
 
 ### Enhanced Testing Philosophy
-**ELITE MULTI-MCP ORCHESTRATION** - Claude Code must:
 1. **Parallel Execution**: Run all capable MCPs simultaneously for every task
 2. **Consolidated Analysis**: Merge all findings into single decision matrix
 3. **Quality Validation**: Ensure 90%+ consensus between MCPs before proceeding
 4. **Continuous Learning**: Track which MCP combinations work best for each task type
-5. **Automated Progression**: Move through phases only after Claude validates readiness
 6. **Error Prevention**: Catch issues early through redundant validation
 
-### Automated Testing Rules for Claude Code
 
 1. **IMMEDIATE POST-FEATURE TESTING**
    ```typescript
-   // After implementing ANY feature, Claude must:
-   - Launch Playwright browser
    - Navigate to affected pages
    - Test all user interactions
    - Verify visual elements
@@ -684,8 +624,6 @@ CLAUDE_DECISION_LOGIC {
 
 4. **POST-TEST ANALYSIS PROTOCOL**
    ```typescript
-   // CRITICAL: After EACH test run completes, Claude MUST:
-   - STOP and analyze ALL Playwright outputs
    - Review error messages, screenshots, and logs
    - Create a detailed plan based on findings
    - Fix identified issues systematically
@@ -696,16 +634,9 @@ CLAUDE_DECISION_LOGIC {
 
 5. **ENTERPRISE TESTING & PROGRESS TRACKING**
    ```typescript
-   // MANDATORY: Claude MUST maintain persistent session tracking
    
    // Session Persistence Files:
-   - .claude-session/progress-tracking.json    // Overall progress & current state
-   - .claude-session/test-reports/             // Detailed test results & analysis
-   - .claude-session/debugging-logs/           // Debug traces & error analysis
-   - .claude-session/performance-metrics/      // Performance tracking data
    
-   // After /clear command, Claude MUST:
-   1. Read .claude-session/progress-tracking.json for current state
    2. Check latest test results in test-reports/
    3. Resume exactly where left off
    4. Continue systematic testing and fixing
@@ -715,9 +646,7 @@ CLAUDE_DECISION_LOGIC {
    4. Fix issues → 5. Re-test → 6. Repeat until 100% pass rate
    ```
 
-6. **PLAYWRIGHT MCP SERVER ADVANCED USAGE**
    ```typescript
-   // MUST utilize ALL Playwright MCP capabilities:
    - Automatic test generation based on user interactions
    - Code analysis and improvement suggestions  
    - Error tracking, crash reporting, performance analysis
@@ -730,7 +659,6 @@ CLAUDE_DECISION_LOGIC {
 
 7. **ENTERPRISE QUALITY STANDARDS**
    ```typescript
-   // CRITICAL: Claude MUST achieve:
    - 100% test pass rate before proceeding
    - Zero console errors or warnings
    - < 2s page load times
@@ -743,7 +671,6 @@ CLAUDE_DECISION_LOGIC {
 
 8. **PROGRESS DOCUMENTATION RULES**
    ```typescript
-   // Claude MUST update after each significant action:
    
    // progress-tracking.json updates:
    - Current phase and overall progress percentage
@@ -757,7 +684,7 @@ CLAUDE_DECISION_LOGIC {
    - Applied fixes and their reasoning
    - Performance metrics and trends
    
-   // CLAUDE.md updates:
+   // Codex.md updates:
    - New testing rules and protocols
    - Lessons learned and best practices
    - Updated architecture decisions
@@ -824,10 +751,8 @@ CLAUDE_DECISION_LOGIC {
 - Network request optimization
 ```
 
-### Testing Commands for Claude Code
 
 ```bash
-# Install Playwright (first time only)
 cd cherrygifts-chat && npm install
 
 # Run automated test & fix system
@@ -848,11 +773,6 @@ npm run test:debug
 # Generate and view test report
 npm run test:report
 
-# Manual Playwright commands
-npx playwright test            # Run all tests
-npx playwright test --project=chromium  # Chrome only
-npx playwright test --project=Mobile    # Mobile tests
-npx playwright show-report     # View HTML report
 ```
 
 ### Auto-Fix Strategies
@@ -881,7 +801,6 @@ npx playwright show-report     # View HTML report
 
 ```mermaid
 graph TD
-    A[Feature Complete] --> B[Auto-Launch Playwright]
     B --> C[Run Feature Tests]
     C --> D{Errors Found?}
     D -->|Yes| E[Analyze Error]
@@ -914,7 +833,6 @@ graph TD
    - Real-time error notifications
    ```
 
-### Testing Best Practices for Claude Code
 
 1. **ALWAYS test mobile viewport first** (375px width)
 2. **Use realistic user interactions** (delays, typos, etc.)
@@ -927,10 +845,8 @@ graph TD
 ### Example Test Implementation
 
 ```typescript
-// When Claude Code implements a new chat feature:
 async function testNewChatFeature() {
   // 1. Launch browser
-  const browser = await playwright.launch({ headless: false });
   const page = await browser.newPage();
   
   // 2. Authenticate
@@ -968,7 +884,6 @@ async function testNewChatFeature() {
 
 ### Error Recovery Protocol
 
-When Claude Code encounters test failures:
 1. **Capture full context** (screenshot, logs, stack trace)
 2. **Identify pattern** (styling, logic, network, etc.)
 3. **Apply targeted fix** (minimal changes)

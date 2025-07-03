@@ -41,7 +41,6 @@ METHOD_2_CHAINING {
     "Create structured roadmap with milestones and quality gates"
   }
   ↓
-  CLAUDE_ANALYSIS → {
     "Synthesize findings, identify consensus, plan implementation strategy"
   }
 }
@@ -73,7 +72,6 @@ HYBRID_APPROACH {
   
   // Quality Validation
   METHOD_1: [
-    Playwright_MCP: "UI/UX validation",
     BrowserStack_MCP: "Cross-platform compatibility", 
     Sentry_MCP: "Error monitoring setup"
   ] → PARALLEL_VALIDATION
@@ -105,7 +103,6 @@ HYBRID_APPROACH {
 #### **MCP Orchestration Strategy**:
 ```typescript
 METHOD_1_PARALLEL_VALIDATION {
-  Playwright_MCP: {
     "E2E testing, user journey validation, visual regression"
   },
   BrowserStack_MCP: {
@@ -157,7 +154,6 @@ METHOD_2_INVESTIGATION_PIPELINE {
     Software_Planning_MCP → "Plan fix with minimal disruption"
   ↓
   VALIDATION_PHASE:
-    METHOD_1 [Playwright + BrowserStack + Sentry] → "Validate fix comprehensively"
   ↓
   LEARNING_PHASE:
     Document solution, update monitoring, improve prevention systems
@@ -181,7 +177,6 @@ METHOD_2_INVESTIGATION_PIPELINE {
 METHOD_1_COMPREHENSIVE_ANALYSIS {
   ALL_MCPS_PARALLEL_ANALYSIS: [
     Sentry_MCP: "Performance trends, error patterns, user behavior",
-    Playwright_MCP: "UI/UX improvement opportunities",
     BrowserStack_MCP: "Platform optimization insights",
     Supabase_MCP: "Database performance and optimization",
     Software_Planning_MCP: "Process efficiency metrics",
@@ -203,13 +198,11 @@ METHOD_1_COMPREHENSIVE_ANALYSIS {
 1. **Start MCP 1** → Execute completely → Write results to file
 2. **After MCP 1 finishes** → Start MCP 2 → Append results to same file  
 3. **After MCP 2 finishes** → Start MCP 3 → Append results to same file
-4. **After all MCPs finish** → Claude reads entire file → Analyzes combined results
 5. **Based on analysis** → Send file to next MCP chain OR complete task
 
 ### **File Management Protocol**:
 - Each task gets ONE consolidated file
 - Each MCP appends its results with timestamps
-- If data is huge, Claude can analyze after each MCP and summarize
 - Final file contains all perspectives for comprehensive analysis
 
 ### **Method Compatibility**:
@@ -220,11 +213,9 @@ METHOD_1_COMPREHENSIVE_ANALYSIS {
 
 ### **Pattern 1: Research Convergence (Sequential Multi-MCP)**
 **When**: Need comprehensive understanding of complex topics  
-**Execution**: ONE MCP at a time, each writes to same file, Claude analyzes after all complete
 
 ```markdown
 ## Research Task: [TOPIC]
-**File**: `.claude-session/mcp-analysis/research-[task-id].md`
 
 ### MCP 1: Context7 Analysis
 [Context7 executes alone, writes latest documentation findings]
@@ -235,8 +226,6 @@ METHOD_1_COMPREHENSIVE_ANALYSIS {
 ### MCP 3: Perplexity Investigation
 [Perplexity executes alone, writes technical analysis below Exa results]
 
-### Claude Analysis (After All MCPs Complete)
-[Claude reads entire file, analyzes all three perspectives]
 **Consensus**: [Points where all MCPs align]
 **Conflicts**: [Areas needing further investigation]
 **Synthesis**: [Combined insights and recommended approach]
@@ -249,9 +238,7 @@ METHOD_1_COMPREHENSIVE_ANALYSIS {
 
 ```markdown
 ## Validation Report: [FEATURE/FIX]
-**File**: `.claude-session/mcp-analysis/validation-[task-id].md`
 
-### MCP 1: Playwright Testing
 **Functional Testing**: [Pass/Fail with details]
 **User Experience**: [Observations and metrics]
 
@@ -263,8 +250,6 @@ METHOD_1_COMPREHENSIVE_ANALYSIS {
 **Error Detection**: [No new issues detected]
 **Performance Impact**: [Before/after metrics]
 
-### Claude Quality Gate Analysis
-[After all MCPs complete, Claude reads entire file]
 **Overall Status**: [PASS/FAIL/CONDITIONAL]
 **Rationale**: [Data-driven decision from all 3 MCPs]
 **Next Chain**: [If FAIL, send to debugging MCP chain]

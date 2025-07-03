@@ -14,7 +14,7 @@
 ```
 /home/eren/Documents/Cline/cherrygifts.chat/    <- Workspace folder
 ├── Documentation/                               <- Our docs ✅
-├── CLAUDE.md                                   <- Main guide ✅
+├── Codex.md                                   <- Main guide ✅
 └── cherrygifts-chat/                          <- Nested Next.js project ❌
     ├── package.json                            <- Should be at workspace root
     ├── next.config.js                          <- Should be at workspace root
@@ -28,7 +28,7 @@
 ```
 /home/eren/Documents/Cline/cherrygifts.chat/    <- Workspace = Project Root
 ├── Documentation/                               <- Keep (our docs)
-├── CLAUDE.md                                   <- Keep (main guide)
+├── Codex.md                                   <- Keep (main guide)
 ├── package.json                                <- Moved up ✅
 ├── next.config.js                              <- Moved up ✅
 ├── app/                                        <- Moved up ✅
@@ -57,7 +57,7 @@
 ✅ **NO CHANGES NEEDED** - All imports use relative paths
 
 ### **Documentation Updates Needed**:
-- Update CLAUDE.md commands (remove `cd cherrygifts-chat`)
+- Update Codex.md commands (remove `cd cherrygifts-chat`)
 - Update Documentation references if any point to old structure
 
 ---
@@ -88,7 +88,7 @@ rmdir cherrygifts-chat  # Remove empty folder
 
 ### **Phase 3: Update Documentation**
 ```bash
-# Update CLAUDE.md to remove cd commands
+# Update Codex.md to remove cd commands
 # Update any path references in Documentation/
 ```
 
@@ -172,7 +172,7 @@ ls -la | head -10
 - [ ] `app/` folder exists at workspace root
 - [ ] `next.config.js` exists at workspace root
 - [ ] `Documentation/` folder still exists
-- [ ] `CLAUDE.md` still exists
+- [ ] `Codex.md` still exists
 - [ ] Old `cherrygifts-chat/` folder is gone
 
 ### **Functionality Verification**:
@@ -182,7 +182,7 @@ ls -la | head -10
 - [ ] Build process works: `npm run build`
 
 ### **Documentation Updates**:
-- [ ] Update CLAUDE.md quick start commands
+- [ ] Update Codex.md quick start commands
 - [ ] Remove `cd cherrygifts-chat` from all commands
 - [ ] Verify Documentation/ paths still work
 

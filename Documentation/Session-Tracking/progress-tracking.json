@@ -51,13 +51,13 @@
     {
       "task": "Elite MCP Team - 10 servers configured and optimized",
       "status": "COMPLETED",
-      "files": ["10 MCP servers: Playwright, Context7, Exa, BrowserStack, Sentry, Supabase, Perplexity, Sequential Thinking, Shrimp Task Manager (upgraded), Mem0 Memory (new)"],
+      "files": ["10 MCP servers: Context7, Exa, BrowserStack, Sentry, Supabase, Perplexity, Sequential Thinking, Shrimp Task Manager (upgraded), Mem0 Memory (new)"],
       "timestamp": "2025-06-13T17:00:00.000Z"
     },
     {
       "task": "Elite Developer MCP Orchestration Framework - Complete with debug strategy",
       "status": "COMPLETED",
-      "files": ["CLAUDE.md + ELITE-DEVELOPER-ORCHESTRATION-FRAMEWORK.md - Full 10-MCP framework with Method 1 debug approach"],
+      "files": ["Codex.md + ELITE-DEVELOPER-ORCHESTRATION-FRAMEWORK.md - Full 10-MCP framework with Method 1 debug approach"],
       "timestamp": "2025-06-13T17:00:00.000Z"
     }
   ],

@@ -112,7 +112,7 @@ async function generateReport(result: TestResult): Promise<void> {
 }
 
 async function main() {
-  console.log('🤖 Claude Code Auto Test & Fix System\n');
+  console.log('🤖 Automated Test & Fix System\n');
   
   // Step 1: Run lint and type checks
   const checksPass = await runLintAndTypeCheck();

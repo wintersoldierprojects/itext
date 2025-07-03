@@ -2,8 +2,8 @@
 
 ## 📁 **Main Framework Files**
 
-### **1. CLAUDE.md** - PROJECT-SPECIFIC GUIDE
-**Location**: `/home/eren/Documents/Cline/cherrygifts.chat/CLAUDE.md`
+### **1. Codex.md** - PROJECT-SPECIFIC GUIDE
+**Location**: `/home/eren/Documents/Cline/cherrygifts.chat/Codex.md`
 **Purpose**: Complete project documentation for CherryGifts Chat development
 **Contains**:
 - Project status, tech stack, credentials
@@ -35,7 +35,6 @@
 ## 📁 **Session Tracking Files**
 
 ### **3. progress-tracking.json** - PROJECT PROGRESS
-**Location**: `.claude-session/progress-tracking.json`
 **Purpose**: Track CherryGifts project completion status
 **Contains**:
 - Current phase and overall progress percentage
@@ -46,7 +45,6 @@
 ---
 
 ### **4. MCP Analysis Directory** - TASK RESULTS
-**Location**: `.claude-session/mcp-analysis/`
 **Purpose**: Store consolidated results from MCP operations
 **Structure**:
 - `research-[task-id].md` - Multi-MCP research results
@@ -58,7 +56,7 @@
 
 ## 🎯 **PRIMARY FORMAT DECISION**
 
-### **MAIN FORMAT**: CLAUDE.md
+### **MAIN FORMAT**: Codex.md
 **Rationale**: 
 - Project-specific and immediately actionable
 - Contains all active MCP configurations
@@ -76,9 +74,8 @@
 
 ## 🔄 **USAGE PATTERN**
 
-1. **Start with CLAUDE.md** for current project work
+1. **Start with Codex.md** for current project work
 2. **Reference ELITE-DEVELOPER-ORCHESTRATION-FRAMEWORK.md** for methodology
-3. **Use `.claude-session/` files** for tracking and analysis
-4. **Update both** as project evolves and methodology improves
+3. **Update both** as project evolves and methodology improves
 
-**Both files complement each other** - CLAUDE.md for specific implementation, Elite Framework for universal principles.
+**Both files complement each other** - Codex.md for specific implementation, Elite Framework for universal principles.
