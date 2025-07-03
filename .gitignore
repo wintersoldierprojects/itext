@@ -24,3 +24,6 @@ logs/
 
 # Optional
 coverage/
+
+# Supabase temporary files
+supabase/.temp/
