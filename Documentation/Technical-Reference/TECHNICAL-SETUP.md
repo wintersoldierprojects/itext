@@ -5,7 +5,6 @@ Complete technical specifications and configuration guide for the Instagram DM r
 **See Also**:
 - [Main Project Guide](../../Codex.md) - Primary documentation
 - [Progress Tracking](../Project-Management/progress.md) - Current status  
-- [Elite MCP Framework](../Development-Framework/ELITE-DEVELOPER-ORCHESTRATION-FRAMEWORK.md) - Development methodology
 - [Instagram Design Guide](./INSTAGRAM-DESIGN-GUIDE.md) - UI specifications
 - [Debugging Guide](./DEBUGGING-GUIDE.md) - Troubleshooting procedures
 
