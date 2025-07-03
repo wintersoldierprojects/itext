@@ -98,8 +98,8 @@ rmdir cherrygifts-chat  # Remove empty folder
 ls -la  # Should see package.json, app/, etc. at root
 
 # 2. Test Next.js functionality
-npm install  # If node_modules was moved
-npm run dev   # Should start without cd command
+yarn install  # If node_modules was moved
+yarn dev   # Should start without cd command
 
 # 3. Verify all features work
 # Test admin login, conversations, etc.
@@ -176,10 +176,10 @@ ls -la | head -10
 - [ ] Old `cherrygifts-chat/` folder is gone
 
 ### **Functionality Verification**:
-- [ ] `npm run dev` starts without cd command
+- [ ] `yarn dev` starts without cd command
 - [ ] Admin login works at `localhost:3000/admin`
 - [ ] TypeScript compilation works: `npx tsc --noEmit`
-- [ ] Build process works: `npm run build`
+- [ ] Build process works: `yarn build`
 
 ### **Documentation Updates**:
 - [ ] Update Codex.md quick start commands
@@ -192,7 +192,7 @@ ls -la | head -10
 
 1. **Standard Structure**: Follows Next.js best practices
 2. **Simpler Navigation**: No nested folders confusion
-3. **Cleaner Commands**: `npm run dev` instead of `cd cherrygifts-chat && npm run dev`
+3. **Cleaner Commands**: `yarn dev` instead of `cd cherrygifts-chat && yarn dev`
 4. **Better VSCode Integration**: Workspace becomes the actual project
 5. **Easier Deployment**: Standard structure for Vercel/Netlify
 6. **Developer Experience**: Intuitive folder layout
@@ -212,7 +212,7 @@ cp -r /home/eren/Documents/Cline/cherrygifts.chat.backup.*/* /home/eren/Document
 
 # 3. Verify restoration
 cd /home/eren/Documents/Cline/cherrygifts.chat/cherrygifts-chat
-npm run dev
+yarn dev
 ```
 
 ---

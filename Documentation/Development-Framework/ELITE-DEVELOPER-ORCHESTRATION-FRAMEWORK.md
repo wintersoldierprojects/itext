@@ -72,8 +72,7 @@ HYBRID_APPROACH {
   
   // Quality Validation
   METHOD_1: [
-    BrowserStack_MCP: "Cross-platform compatibility", 
-    Sentry_MCP: "Error monitoring setup"
+    BrowserStack_MCP: "Cross-platform compatibility"
   ] → PARALLEL_VALIDATION
   
   // Continuous Feedback
@@ -108,9 +107,6 @@ METHOD_1_PARALLEL_VALIDATION {
   BrowserStack_MCP: {
     "Cross-device testing, accessibility compliance, performance on various hardware"
   },
-  Sentry_MCP: {
-    "Error monitoring, performance tracking, user experience metrics"
-  },
   Context7_MCP: {
     "Latest testing best practices, security compliance updates"
   },
@@ -142,9 +138,6 @@ METHOD_1_PARALLEL_VALIDATION {
 #### **MCP Orchestration Strategy**:
 ```typescript
 METHOD_2_INVESTIGATION_PIPELINE {
-  DETECTION_PHASE:
-    Sentry_MCP → "Identify errors, performance issues, user experience problems"
-  ↓
   ANALYSIS_PHASE:
     Sequential_Thinking_MCP → "Break down problem systematically"
     Perplexity_MCP [PARALLEL] → "Research known solutions and best practices"
@@ -176,7 +169,6 @@ METHOD_2_INVESTIGATION_PIPELINE {
 ```typescript
 METHOD_1_COMPREHENSIVE_ANALYSIS {
   ALL_MCPS_PARALLEL_ANALYSIS: [
-    Sentry_MCP: "Performance trends, error patterns, user behavior",
     BrowserStack_MCP: "Platform optimization insights",
     Supabase_MCP: "Database performance and optimization",
     Software_Planning_MCP: "Process efficiency metrics",
@@ -259,7 +251,7 @@ METHOD_1_COMPREHENSIVE_ANALYSIS {
 **When**: Systematic debugging and improvement
 ```markdown
 ## Issue Resolution: [PROBLEM_ID]
-### Detection (Sentry MCP)
+### Issue Detection
 **Issue**: [Detailed problem description]
 **Impact**: [User/system impact metrics]
 

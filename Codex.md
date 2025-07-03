@@ -34,13 +34,13 @@ Instagram DM-Style Messaging Platform - Simplified Clean Build
 
 ```bash
 # Development with Clean Turbopack (RECOMMENDED)
-npm run dev  # Uses clean Turbopack build
+yarn dev  # Uses clean Turbopack build
 
 # Development with debugging
-DEBUG=cherrygifts:* npm run dev
+DEBUG=cherrygifts:* yarn dev
 
 # Build for production (with Turbopack)
-npm run build && npm run start
+yarn build && yarn start
 
 # Force kill processes if needed
 pkill -f "next.*dev"
@@ -116,10 +116,10 @@ cherrygifts-chat/
 ### 1. Turbopack Build System (NEW)
 ```bash
 # Default development (Turbopack)
-npm run dev  # Uses --turbo flag automatically
+yarn dev  # Uses --turbo flag automatically
 
 # Production builds
-npm run build  # 10x faster compilation
+yarn build  # 10x faster compilation
 ```
 
 ### 2. Mock Conversation System (NEW)
@@ -152,7 +152,7 @@ npm run build  # 10x faster compilation
 
 ## 🛠 Development Guidelines
 
-1. **Use Clean Turbopack** - `npm run dev` (faster builds, no PWA)
+1. **Use Clean Turbopack** - `yarn dev` (faster builds, no PWA)
 2. **English Only** - All content must be en-US, no RTL or Persian
 3. **Basic Supabase** - Simple cache and sessions, no complex persistence
 4. **Never create new .md files** - Update existing ones only
@@ -266,27 +266,7 @@ npm run build  # 10x faster compilation
 - Debug browser-specific issues and rendering problems
 - Performance monitoring across different hardware configurations
 
-#### 5. **Sentry MCP** - Error Tracking & Performance Monitoring
-**Location**: Remote MCP via `npx mcp-remote@latest https://mcp.sentry.dev/sse`
-**Purpose**: Real-time error tracking, performance monitoring, and issue resolution
-**Status**: ✅ ACTIVE
-
-**All Available Tools**:
-- `find_issues`: Search and analyze application errors and performance issues
-- `begin_seer_issue_fix`: AI-powered automatic issue resolution
-- `find_transactions`: Performance monitoring and transaction analysis
-
-**Professional Use Cases**:
-- Real-time error detection and alerting
-- Performance bottleneck identification
-- User experience monitoring and analysis
-- Automated issue resolution and suggestions
-- Error rate tracking and trending
-- Release health monitoring
-- Custom error boundary implementation
-- Performance regression detection
-
-#### 6. **Supabase MCP** - Database Management & Backend Operations
+#### 5. **Supabase MCP** - Database Management & Backend Operations
 **Location**: `/home/eren/.local/bin/supabase-mcp-server`
 **Purpose**: Complete Supabase database management, API operations, and backend administration
 
@@ -308,7 +288,7 @@ npm run build  # 10x faster compilation
 - Backup and recovery operations
 - Development environment database management
 
-#### 7. **Software Planning MCP** - Project Management & Task Planning
+#### 6. **Software Planning MCP** - Project Management & Task Planning
 **Location**: `/home/eren/Documents/Cline/MCP/Software-planning-mcp/build/index.js`
 **Purpose**: Comprehensive project planning, task management, and development workflow organization
 
@@ -324,7 +304,7 @@ npm run build  # 10x faster compilation
 - Release planning and deployment strategies
 - Team collaboration and workflow optimization
 
-#### 8. **Perplexity MCP** - AI-Powered Research & Documentation
+#### 7. **Perplexity MCP** - AI-Powered Research & Documentation
 **Location**: `/home/eren/Documents/Cline/MCP/perplexity-mcp/build/index.js`
 **Purpose**: Advanced AI research, documentation analysis, and deprecated code detection
 
@@ -343,7 +323,7 @@ npm run build  # 10x faster compilation
 - Best practices research and implementation
 - Technology stack evaluation and comparison
 
-#### 9. **Sequential Thinking MCP** - Advanced Problem Solving & Analysis
+#### 8. **Sequential Thinking MCP** - Advanced Problem Solving & Analysis
 **Location**: Remote NPM package `@modelcontextprotocol/server-sequential-thinking`
 **Purpose**: Structured problem-solving, complex analysis, and step-by-step reasoning
 
@@ -358,7 +338,7 @@ npm run build  # 10x faster compilation
 - Security assessment and threat modeling
 - Technical requirement analysis and decomposition
 
-#### 10. **Shrimp Task Manager MCP** - Enterprise-Grade Task Management
+#### 9. **Shrimp Task Manager MCP** - Enterprise-Grade Task Management
 **Location**: Remote Smithery `@cjo4m06/mcp-shrimp-task-manager`
 **Purpose**: Structured workflows, systematic programming guidance, and enterprise task management
 
@@ -425,7 +405,6 @@ npm run build  # 10x faster compilation
 
 **Execution Protocol**:
 1. **Deploy ALL RELEVANT MCPs Sequentially** (Method 1) - Each creates their own analysis AND solution idea:
-   - **Sentry MCP**: Technical error detection + proposed monitoring/alerting fixes
    - **Sequential Thinking MCP**: Systematic problem decomposition + logical solution approach
    - **Perplexity MCP**: Research-based analysis + industry best practice solutions
    - **Shrimp Task Manager MCP**: Risk assessment + systematic debugging workflow + fix prioritization
@@ -451,10 +430,9 @@ npm run build  # 10x faster compilation
 
 #### **Error Detection & Resolution Chain**:
 2. **BrowserStack MCP**: Validate fixes across real devices and browsers
-3. **Sentry MCP**: Monitor for runtime errors and performance issues
-4. **Perplexity MCP**: Research solutions for complex problems
-5. **Sequential Thinking MCP**: Break down complex debugging scenarios
-6. **Auto-fix and re-test**: Apply fixes and run through entire chain again
+3. **Perplexity MCP**: Research solutions for complex problems
+4. **Sequential Thinking MCP**: Break down complex debugging scenarios
+5. **Auto-fix and re-test**: Apply fixes and run through entire chain again
 
 #### **Documentation Strategy with Multiple MCPs**:
 Each MCP should write results to separate markdown sections:
@@ -478,7 +456,6 @@ Each MCP should write results to separate markdown sections:
 ✅ **Context7 MCP** - ACTIVE - Up-to-date documentation  
 ✅ **Exa MCP** - ACTIVE - Intelligent web search & research  
 ✅ **BrowserStack MCP** - ACTIVE - Multi-device testing  
-✅ **Sentry MCP** - ACTIVE - Error tracking & performance monitoring  
 ✅ **Supabase MCP** - ACTIVE - Database management & backend operations  
 ✅ **Perplexity MCP** - ACTIVE - AI-powered research & documentation  
 ✅ **Sequential Thinking MCP** - ACTIVE - Advanced problem solving & analysis  
@@ -513,7 +490,6 @@ TASK_EXECUTION_FRAMEWORK {
 
 **Phase 3: Comprehensive Testing Chain**
 - **BrowserStack MCP**: Cross-device and accessibility testing
-- **Sentry MCP**: Error monitoring and performance analysis
 
 **Phase 4: Error Resolution & Optimization**
 - **Perplexity MCP**: Research advanced solutions for complex issues
@@ -753,23 +729,23 @@ TASK_EXECUTION_FRAMEWORK {
 
 
 ```bash
-cd cherrygifts-chat && npm install
+cd cherrygifts-chat && yarn install
 
 
 # Run specific test suites
-npm run test                    # All tests
-npm run test auth.spec.ts      # Auth tests only
-npm run test chat.spec.ts      # Chat tests only
-npm run test -- --headed       # Run with browser visible
+yarn test                    # All tests
+yarn test auth.spec.ts      # Auth tests only
+yarn test chat.spec.ts      # Chat tests only
+yarn test -- --headed       # Run with browser visible
 
 # Interactive test UI
-npm run test:ui
+yarn test:ui
 
 # Debug failing tests
-npm run test:debug
+yarn test:debug
 
 # Generate and view test report
-npm run test:report
+yarn test:report
 
 ```
 
@@ -945,16 +921,16 @@ async function testNewChatFeature() {
 
 ```bash
 # Development with clean Turbopack (default)
-npm run dev                 # Clean Turbopack build
+yarn dev                 # Clean Turbopack build
 
 # Build for production
-npm run build              # Clean production build
+yarn build              # Clean production build
 
 # Test locally
-npm run start              # Serves built app
+yarn start              # Serves built app
 
 # Debug development
-DEBUG=cherrygifts:* npm run dev
+DEBUG=cherrygifts:* yarn dev
 ```
 
 ## 🔐 Authentication Flow (Working)
