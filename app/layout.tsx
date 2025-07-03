@@ -1,20 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { LocalizationProvider } from "./components/LocalizationProvider";
 import { MetricsProvider } from "./components/MetricsProvider";
 import { UserStatusProvider } from "./components/UserStatusProvider";
-import { SentryInitializer } from "./components/SentryInitializer";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "CherryGifts Chat - Instagram-Style Messaging",
@@ -61,6 +49,7 @@ export const viewport: Viewport = {
   ],
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -68,10 +57,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-full overflow-hidden`}
-      >
-        <SentryInitializer />
+      <body className="font-sans antialiased h-full overflow-hidden">
         <MetricsProvider>
           <LocalizationProvider>
             <UserStatusProvider>

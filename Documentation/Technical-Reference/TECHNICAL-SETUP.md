@@ -96,9 +96,6 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key_here
 NEXT_PUBLIC_APP_URL=http://localhost:3000
 NEXT_PUBLIC_APP_NAME=CherryGifts Chat
 NEXT_PUBLIC_DEBUG_MODE=true
-# Sentry configuration
-# Use your own DSN in production. A default DSN can remain for local testing.
-NEXT_PUBLIC_SENTRY_DSN=your_sentry_dsn_here
 ```
 
 ### Supabase Clients

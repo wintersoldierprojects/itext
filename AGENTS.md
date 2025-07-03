@@ -632,7 +632,7 @@ export function UserForm() {
 ### Error Boundaries
 
 - Use error boundaries to catch and handle errors in React component trees gracefully
-- Log caught errors to an external service (e.g., Sentry) for tracking and debugging
+- Log caught errors for tracking and debugging
 - Design user-friendly fallback UIs to display when errors occur, keeping users informed without breaking the app
 
 ```tsx
@@ -659,7 +659,7 @@ export class ErrorBoundary extends Component<Props, State> {
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Uncaught error:', error, errorInfo);
-    // Log to external service like Sentry
+    // Log to external service for tracking
   }
 
   public render() {
@@ -931,7 +931,7 @@ module.exports = nextConfig;
 ### Application Monitoring
 
 - Performance metrics tracking
-- Error tracking with Sentry
+- Error tracking and monitoring
 - User behavior analytics
 - Core Web Vitals monitoring
 
@@ -943,21 +943,11 @@ module.exports = nextConfig;
 
 ```tsx
 // Example: Error tracking setup
-import * as Sentry from '@sentry/nextjs';
-
-Sentry.init({
-  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
-  environment: process.env.NODE_ENV,
-  tracesSampleRate: 1.0,
-});
-
 // Custom error logging utility
 export const logger = {
   error: (message: string, error?: Error, context?: Record<string, any>) => {
     console.error(message, error, context);
-    Sentry.captureException(error || new Error(message), {
-      extra: context,
-    });
+    // Could integrate with external error tracking service here
   },
   warn: (message: string, context?: Record<string, any>) => {
     console.warn(message, context);
