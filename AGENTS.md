@@ -157,30 +157,30 @@ nextjs-project/
 ### Development Requirements
 
 - Node.js >= 18.0.0
-- npm >= 8.0.0 or yarn >= 1.22.0
+- yarn >= 1.22.0
 - TypeScript >= 5.0.0
 
 ### Installation Steps
 
 ```bash
 # 1. Create Next.js project with TypeScript
-npx create-next-app@latest my-nextjs-app --typescript --tailwind --eslint --app
+yarn dlx create-next-app@latest my-nextjs-app --typescript --tailwind --eslint --app
 
 # 2. Navigate to project directory
 cd my-nextjs-app
 
 # 3. Install additional dependencies
-npm install @reduxjs/toolkit react-redux
-npm install @hookform/resolvers react-hook-form zod
-npm install @radix-ui/react-* # Install specific Radix components
-npm install dompurify next-i18next
-npm install -D @types/dompurify
+yarn add @reduxjs/toolkit react-redux
+yarn add @hookform/resolvers react-hook-form zod
+yarn add @radix-ui/react-* # Install specific Radix components
+yarn add dompurify next-i18next
+yarn add -D @types/dompurify
 
 # 4. Install Shadcn UI
-npx shadcn-ui@latest init
+yarn dlx shadcn-ui@latest init
 
 # 5. Start development server
-npm run dev
+yarn dev
 ```
 
 ### Environment Variables Configuration
@@ -862,13 +862,13 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => ({
 
 ```bash
 # Build for production
-npm run build
+yarn build
 
 # Start production server
-npm start
+yarn start
 
 # Export static files (if using static export)
-npm run export
+yarn export
 ```
 
 ### Environment Variables for Production
