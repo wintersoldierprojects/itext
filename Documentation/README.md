@@ -9,6 +9,7 @@
 - `progress.md` - Current progress tracking and completion status
 - `activeContext.md` - Current development context and priorities  
 - `projectbrief.md` - Project scope, requirements, and objectives
+- `agent-integration.md` - Shared branch workflow for parallel agents
 
 **Cross-References**: Technical-Reference/TECHNICAL-SETUP.md, Development-Framework/
 

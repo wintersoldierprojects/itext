@@ -41,6 +41,9 @@ Follow these steps to effectively implement Agents.md in your projects to maximi
    - In your Agents.md file, provide clear instructions on how to run tests, what testing frameworks are used, and any specific testing requirements. This enables OpenAI Codex to generate not only functional code but also appropriate test cases.
 5. **Specify PR Guidelines**
    - For teams using OpenAI Codex in collaborative environments, include instructions about Pull Request messages, formatting, and specific information that should be included when creating PRs. This helps ensure that code contributions follow your team's workflow.
+6. **Use Shared Integration Branch**
+   - All agents must push changes to the `integration` branch sequentially.
+   - Before each update, fetch and rebase from `integration` to stay current.
 
 ---
 
