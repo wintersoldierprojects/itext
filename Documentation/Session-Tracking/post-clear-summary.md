@@ -5,13 +5,10 @@
 
 ## ✅ **COMPLETED SETUP**
 
-2. **Context7 MCP** - `npx -y @smithery/cli@latest run @upstash/context7-mcp --key [API_KEY]`
-3. **Exa MCP** - `npx -y @smithery/cli@latest run exa --key [API_KEY]`
-4. **BrowserStack MCP** - `npx -y @smithery/cli@latest run @browserstack/mcp-server --key [API_KEY]`
 6. **Supabase MCP** - `/home/eren/.local/bin/supabase-mcp-server`
 7. **Software Planning MCP** - `node /home/eren/Documents/Cline/MCP/Software-planning-mcp/build/index.js`
 8. **Perplexity MCP** - `node /home/eren/Documents/Cline/MCP/perplexity-mcp/build/index.js`
-9. **Sequential Thinking MCP** - `npx -y @modelcontextprotocol/server-sequential-thinking`
+9. **Sequential Thinking MCP** - `yarn dlx @modelcontextprotocol/server-sequential-thinking`
 
 ### **Elite Developer MCP Orchestration Framework**:
 - ✅ Complete documentation in Codex.md
