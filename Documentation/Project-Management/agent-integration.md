@@ -1,18 +1,17 @@
-# 🔄 Agent Integration Workflow
+# 🔄 Agent Workflow
 
-**Purpose**: Coordinate parallel agent work through a single integration branch to avoid conflicts.
+**Purpose**: Outline the branching strategy for parallel agents using feature branches and pull requests.
 
-## 🌱 Shared Branch
-- Branch name: `integration`
-- All agents push their commits to this branch sequentially.
+## 🌱 Feature Branches
+- Create your branch from `main` using the naming pattern `agent-<name>/feature/<task>`.
+- Never commit directly to `main` or another agent's branch.
 
-## 📥 Before Each Update
-1. `git fetch origin integration`
-2. `git checkout integration`
-3. `git pull`
+## 📥 Before Working
+1. `git checkout main && git pull`
+2. `git checkout -b agent-<name>/feature/<task>`
 
-## 🚀 After Commit
-- Run `git push origin integration` to share changes.
-- Notify other agents to re-fetch before they continue.
+## 🚀 Share Changes
+- Push your feature branch: `git push -u origin agent-<name>/feature/<task>`
+- Open a Pull Request targeting `main`. Wait for CI and review to merge.
 
 **Cross-References**: [progress.md](progress.md)
