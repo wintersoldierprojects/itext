@@ -41,11 +41,80 @@ Follow these steps to effectively implement Agents.md in your projects to maximi
    - In your Agents.md file, provide clear instructions on how to run tests, what testing frameworks are used, and any specific testing requirements. This enables OpenAI Codex to generate not only functional code but also appropriate test cases.
 5. **Specify PR Guidelines**
    - For teams using OpenAI Codex in collaborative environments, include instructions about Pull Request messages, formatting, and specific information that should be included when creating PRs. This helps ensure that code contributions follow your team's workflow.
-6. **Use Shared Integration Branch**
-   - All agents must push changes to the `integration` branch sequentially.
-   - Before each update, fetch and rebase from `integration` to stay current.
+## Agent Collaboration & Safety Rules
 
----
+1. **Unique Branching**
+
+    Each agent must create and work in its own feature branch using this naming:
+    `agent-<name>/feature/<topic-or-issue>`
+
+    Never work directly in main or another agent’s branch.
+
+2. **Path Isolation**
+
+    Agents must only read/write files in their assigned folder (e.g., `scripts/agentX/**`).
+
+    Any shared or global file edits require a Pull Request (PR).
+
+3. **Automated Pull Requests**
+
+    All changes to shared files or main must go through a PR.
+
+    PRs will be auto-accepted and merged if:
+
+        They have no conflicts,
+
+        All checks/tests pass,
+
+        No other agent is modifying the same files.
+
+4. **Branch Cleanup**
+
+    After a PR is auto-merged, the feature branch should be deleted automatically.
+
+    Agents must never manually delete or force-push to shared branches.
+
+5. **Concurrency & Conflict Avoidance**
+
+    Parallel agents are allowed—provided each operates in its own branch and folder.
+
+    Do not edit or delete other agents’ files or branches.
+
+    Shared file changes must go through a PR and merge queue.
+
+6. **Commit & Review Discipline**
+
+    Keep commits atomic and related to a single task/issue.
+
+    Always rebase or update your branch before creating a PR.
+
+    If conflicts arise, resolve them locally before re-submitting.
+
+7. **Task & Archive Workflow**
+
+    When a task is complete and merged, mark it as done and archive related resources if no longer needed.
+
+**Example Workflow**
+
+    Checkout latest main
+
+    `git checkout -b agent-<name>/feature/<task>`
+
+    Work only in your assigned path
+
+    Push changes
+
+    Open a Pull Request
+
+    If no conflicts & all checks pass, PR will be auto-merged
+
+    Branch is deleted after merge
+
+**Notes:**
+
+    All agents must strictly follow these rules for safe, scalable collaboration.
+
+    Violation may result in agent disablement or code rollback.
 
 # Next.js React Redux TypeScript Development Guide
 
@@ -157,30 +226,30 @@ nextjs-project/
 ### Development Requirements
 
 - Node.js >= 18.0.0
-- npm >= 8.0.0 or yarn >= 1.22.0
+- yarn >= 1.22.0
 - TypeScript >= 5.0.0
 
 ### Installation Steps
 
 ```bash
 # 1. Create Next.js project with TypeScript
-npx create-next-app@latest my-nextjs-app --typescript --tailwind --eslint --app
+yarn dlx create-next-app@latest my-nextjs-app --typescript --tailwind --eslint --app
 
 # 2. Navigate to project directory
 cd my-nextjs-app
 
 # 3. Install additional dependencies
-npm install @reduxjs/toolkit react-redux
-npm install @hookform/resolvers react-hook-form zod
-npm install @radix-ui/react-* # Install specific Radix components
-npm install dompurify next-i18next
-npm install -D @types/dompurify
+yarn add @reduxjs/toolkit react-redux
+yarn add @hookform/resolvers react-hook-form zod
+yarn add @radix-ui/react-* # Install specific Radix components
+yarn add dompurify next-i18next
+yarn add -D @types/dompurify
 
 # 4. Install Shadcn UI
-npx shadcn-ui@latest init
+yarn dlx shadcn-ui@latest init
 
 # 5. Start development server
-npm run dev
+yarn dev
 ```
 
 ### Environment Variables Configuration
@@ -860,13 +929,13 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => ({
 
 ```bash
 # Build for production
-npm run build
+yarn build
 
 # Start production server
-npm start
+yarn start
 
 # Export static files (if using static export)
-npm run export
+yarn export
 ```
 
 ### Environment Variables for Production
