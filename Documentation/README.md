@@ -25,7 +25,6 @@
 
 ### 🚀 **Development-Framework/**
 **Purpose**: Elite MCP orchestration and universal development methodology
-- `ELITE-DEVELOPER-ORCHESTRATION-FRAMEWORK.md` - Complete MCP automation framework with 10+ servers
 
 **Cross-References**: Technical-Reference/
 
@@ -65,7 +64,6 @@ Each document should reference related files using relative paths:
 **See Also**: 
 - ../Technical-Reference/TECHNICAL-SETUP.md
 - ../Project-Management/progress.md
-- ../Development-Framework/ELITE-DEVELOPER-ORCHESTRATION-FRAMEWORK.md
 ```
 
 ## 🎯 **BENEFITS OF THIS STRUCTURE**

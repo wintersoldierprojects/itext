@@ -18,7 +18,6 @@ Instagram DM-Style Messaging Platform - Simplified Clean Build
 - **This File**: `/Codex.md` - Primary project guide (always read first)
 - **Progress Tracking**: `Documentation/Project-Management/progress.md` 
 - **Technical Setup**: `Documentation/Technical-Reference/TECHNICAL-SETUP.md`
-- **Elite MCP Framework**: `Documentation/Development-Framework/ELITE-DEVELOPER-ORCHESTRATION-FRAMEWORK.md`
 - **Debugging Guide**: `Documentation/Technical-Reference/DEBUGGING-GUIDE.md`
 - **Current Context**: `Documentation/Project-Management/activeContext.md`
 
