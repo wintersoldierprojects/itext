@@ -34,13 +34,13 @@ Instagram DM-Style Messaging Platform - Simplified Clean Build
 
 ```bash
 # Development with Clean Turbopack (RECOMMENDED)
-npm run dev  # Uses clean Turbopack build
+yarn dev  # Uses clean Turbopack build
 
 # Development with debugging
-DEBUG=cherrygifts:* npm run dev
+DEBUG=cherrygifts:* yarn dev
 
 # Build for production (with Turbopack)
-npm run build && npm run start
+yarn build && yarn start
 
 # Force kill processes if needed
 pkill -f "next.*dev"
@@ -49,7 +49,7 @@ pkill -f "next.*dev"
 sudo fuser -k 3000/tcp           # Force kill port 3000
 pkill -f "next.*dev"             # Kill Next.js processes
 lsof -i :3000                    # Check what's using port 3000
-npx tsc --noEmit                 # Check TypeScript errors
+yarn dlx tsc --noEmit                 # Check TypeScript errors
 ```
 
 ## 🔑 Test Credentials
@@ -116,10 +116,10 @@ cherrygifts-chat/
 ### 1. Turbopack Build System (NEW)
 ```bash
 # Default development (Turbopack)
-npm run dev  # Uses --turbo flag automatically
+yarn dev  # Uses --turbo flag automatically
 
 # Production builds
-npm run build  # 10x faster compilation
+yarn build  # 10x faster compilation
 ```
 
 ### 2. Mock Conversation System (NEW)
@@ -152,7 +152,7 @@ npm run build  # 10x faster compilation
 
 ## 🛠 Development Guidelines
 
-1. **Use Clean Turbopack** - `npm run dev` (faster builds, no PWA)
+1. **Use Clean Turbopack** - `yarn dev` (faster builds, no PWA)
 2. **English Only** - All content must be en-US, no RTL or Persian
 3. **Basic Supabase** - Simple cache and sessions, no complex persistence
 4. **Never create new .md files** - Update existing ones only
@@ -196,7 +196,7 @@ npm run build  # 10x faster compilation
 
 ### 🎭 **10 Elite MCP Servers Configured for Professional Web Development**
 #### 2. **Context7 MCP** - Up-to-date Documentation & Code Examples
-**Command**: `npx -y @smithery/cli@latest run @upstash/context7-mcp --key [API_KEY]`
+**Command**: `yarn dlx @smithery/cli@latest run @upstash/context7-mcp --key [API_KEY]`
 **Purpose**: Real-time access to current library documentation, API references, and code examples
 
 **All Available Tools**:
@@ -217,7 +217,7 @@ npm run build  # 10x faster compilation
 **Usage**: Add "use context7" to any question about libraries, frameworks, or APIs
 
 #### 3. **Exa MCP** - Intelligent Web Search & Research Engine
-**Command**: `npx -y @smithery/cli@latest run exa --key [API_KEY]`
+**Command**: `yarn dlx @smithery/cli@latest run exa --key [API_KEY]`
 **Purpose**: Advanced web search, academic research, and competitive analysis using AI-powered search
 
 **All Available Tools**:
@@ -243,7 +243,7 @@ npm run build  # 10x faster compilation
 - Find performance optimization techniques and benchmarks
 
 #### 4. **BrowserStack MCP** - Multi-Device Testing & Accessibility
-**Command**: `npx -y @smithery/cli@latest run @browserstack/mcp-server --key [API_KEY]`
+**Command**: `yarn dlx @smithery/cli@latest run @browserstack/mcp-server --key [API_KEY]`
 **Purpose**: Real device testing, cross-browser validation, and accessibility compliance
 
 **All Available Tools**:
@@ -267,7 +267,7 @@ npm run build  # 10x faster compilation
 - Performance monitoring across different hardware configurations
 
 #### 5. **Sentry MCP** - Error Tracking & Performance Monitoring
-**Location**: Remote MCP via `npx mcp-remote@latest https://mcp.sentry.dev/sse`
+**Location**: Remote MCP via `yarn dlx mcp-remote@latest https://mcp.sentry.dev/sse`
 **Purpose**: Real-time error tracking, performance monitoring, and issue resolution
 **Status**: ✅ ACTIVE
 
@@ -753,25 +753,22 @@ TASK_EXECUTION_FRAMEWORK {
 
 
 ```bash
-cd cherrygifts-chat && npm install
-
-# Run automated test & fix system
-npx ts-node scripts/auto-test-fix.ts
+cd cherrygifts-chat && yarn install
 
 # Run specific test suites
-npm run test                    # All tests
-npm run test auth.spec.ts      # Auth tests only
-npm run test chat.spec.ts      # Chat tests only
-npm run test -- --headed       # Run with browser visible
+yarn test                    # All tests
+yarn test auth.spec.ts      # Auth tests only
+yarn test chat.spec.ts      # Chat tests only
+yarn test -- --headed       # Run with browser visible
 
 # Interactive test UI
-npm run test:ui
+yarn test:ui
 
 # Debug failing tests
-npm run test:debug
+yarn test:debug
 
 # Generate and view test report
-npm run test:report
+yarn test:report
 
 ```
 
@@ -947,16 +944,16 @@ async function testNewChatFeature() {
 
 ```bash
 # Development with clean Turbopack (default)
-npm run dev                 # Clean Turbopack build
+yarn dev                 # Clean Turbopack build
 
 # Build for production
-npm run build              # Clean production build
+yarn build              # Clean production build
 
 # Test locally
-npm run start              # Serves built app
+yarn start              # Serves built app
 
 # Debug development
-DEBUG=cherrygifts:* npm run dev
+DEBUG=cherrygifts:* yarn dev
 ```
 
 ## 🔐 Authentication Flow (Working)

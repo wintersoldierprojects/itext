@@ -308,16 +308,16 @@ export function useTouchInteractions(options: TouchInteractionOptions) {
 ```bash
 # Development
 cd cherrygifts-chat
-npm run dev              # Start dev server (http://localhost:3000)
-DEBUG=cherrygifts:* npm run dev  # With debugging
+yarn dev              # Start dev server (http://localhost:3000)
+DEBUG=cherrygifts:* yarn dev  # With debugging
 
 # Production
-npm run build           # Production build
-npm run start           # Start production server
+yarn build           # Production build
+yarn start           # Start production server
 
 # Testing
-npx tsc --noEmit       # TypeScript validation
-npm run lint           # ESLint check
+yarn dlx tsc --noEmit       # TypeScript validation
+yarn lint           # ESLint check
 ```
 
 ## 🎛️ Key Configuration Files
@@ -415,4 +415,4 @@ const longPressDelay = 500;    // Milliseconds
 **Admin**: admin@cherrygifts.com / MySecurePassword123  
 **User**: mehradworld / 1122
 
-**Start Command**: `pkill -f "next.*dev" && cd cherrygifts-chat && DEBUG=cherrygifts:* npm run dev`
+**Start Command**: `pkill -f "next.*dev" && cd cherrygifts-chat && DEBUG=cherrygifts:* yarn dev`
