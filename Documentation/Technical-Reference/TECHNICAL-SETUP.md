@@ -312,7 +312,7 @@ yarn build           # Production build
 yarn start           # Start production server
 
 # Testing
-yarn dlx tsc --noEmit       # TypeScript validation
+yarn tsc --noEmit       # TypeScript validation
 yarn lint           # ESLint check
 ```
 
