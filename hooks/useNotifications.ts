@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { createClient } from '@/lib/supabase'
-import type { Message, RealtimeMessagePayload } from '@/types'
 
 interface NotificationOptions {
   title: string
@@ -190,7 +189,7 @@ export function useAdminNotifications() {
 
     const channel = supabase
       .channel('admin-notifications')
-      .on<RealtimeMessagePayload>(
+      .on(
         'postgres_changes',
         {
           event: 'INSERT',
@@ -199,7 +198,7 @@ export function useAdminNotifications() {
           filter: 'is_admin=eq.false' // Only notify for customer messages
         },
         async (payload) => {
-          const message = payload.new as Message
+          const message = payload.new as any
           
           // Get conversation details
           const { data: conversation } = await supabase

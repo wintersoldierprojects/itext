@@ -60,10 +60,9 @@ export function useMessages(conversationId: string | null, initialMockMessages?:
       }));
 
       setMessages(messagesWithStatus);
-    } catch (e) {
-      const err = e instanceof Error ? e : new Error(String(e))
-      setError(err)
-      setMessages([]) // Clear messages on error
+    } catch (e:any) {
+      setError(e);
+      setMessages([]); // Clear messages on error
     } finally {
       setLoading(false);
     }
@@ -129,9 +128,8 @@ export function useMessages(conversationId: string | null, initialMockMessages?:
       );
       console.log('Message sent successfully and UI updated:', insertedMessage);
 
-    } catch (e) {
-      const err = e instanceof Error ? e : new Error(String(e))
-      setError(err)
+    } catch (e:any) {
+      setError(e);
       // Revert optimistic update or mark as failed
       setMessages(prevMessages =>
         prevMessages.map(msg =>
@@ -277,10 +275,9 @@ export function useMessages(conversationId: string | null, initialMockMessages?:
         )
       );
 
-    } catch (e) {
-      console.error('❌ Failed to mark messages as read:', e)
-      const err = e instanceof Error ? e : new Error(String(e))
-      setError(err)
+    } catch (e: any) {
+      console.error('❌ Failed to mark messages as read:', e);
+      setError(e);
     }
   }, [conversationId, messages, supabase]);
 
@@ -298,8 +295,8 @@ export function useMessages(conversationId: string | null, initialMockMessages?:
       if (updateError) throw updateError;
 
       console.log(`✅ Marked ${messageIds.length} messages as delivered`);
-    } catch (e) {
-      console.error('❌ Failed to mark messages as delivered:', e)
+    } catch (e: any) {
+      console.error('❌ Failed to mark messages as delivered:', e);
     }
   }, [conversationId, supabase]);
 
