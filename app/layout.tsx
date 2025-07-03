@@ -4,7 +4,6 @@ import "./globals.css";
 import { LocalizationProvider } from "./components/LocalizationProvider";
 import { MetricsProvider } from "./components/MetricsProvider";
 import { UserStatusProvider } from "./components/UserStatusProvider";
-import { SentryInitializer } from "./components/SentryInitializer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -71,7 +70,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-full overflow-hidden`}
       >
-        <SentryInitializer />
         <MetricsProvider>
           <LocalizationProvider>
             <UserStatusProvider>

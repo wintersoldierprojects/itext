@@ -96,9 +96,6 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key_here
 NEXT_PUBLIC_APP_URL=http://localhost:3000
 NEXT_PUBLIC_APP_NAME=CherryGifts Chat
 NEXT_PUBLIC_DEBUG_MODE=true
-# Sentry configuration
-# Use your own DSN in production. A default DSN can remain for local testing.
-NEXT_PUBLIC_SENTRY_DSN=your_sentry_dsn_here
 ```
 
 ### Supabase Clients
@@ -303,22 +300,6 @@ export function useTouchInteractions(options: TouchInteractionOptions) {
 }
 ```
 
-## 📱 Development Commands
-
-```bash
-# Development
-cd cherrygifts-chat
-npm run dev              # Start dev server (http://localhost:3000)
-DEBUG=cherrygifts:* npm run dev  # With debugging
-
-# Production
-npm run build           # Production build
-npm run start           # Start production server
-
-# Testing
-npx tsc --noEmit       # TypeScript validation
-npm run lint           # ESLint check
-```
 
 ## 🎛️ Key Configuration Files
 
@@ -410,9 +391,25 @@ const swipeThreshold = 30;     // Lower = more sensitive
 const longPressDelay = 500;    // Milliseconds
 ```
 
+### Local Development
+
+Install dependencies and start the development server with Yarn:
+
+```bash
+yarn install
+yarn dev
+```
+
 ## 🧪 Test Credentials
 
-**Admin**: admin@cherrygifts.com / MySecurePassword123  
+**Admin**: admin@cherrygifts.com / MySecurePassword123
 **User**: mehradworld / 1122
 
-**Start Command**: `pkill -f "next.*dev" && cd cherrygifts-chat && DEBUG=cherrygifts:* npm run dev`
+
+### Creating the Admin Account
+
+Run the following after applying the Supabase migrations:
+
+```bash
+node scripts/create-admin.js admin@cherrygifts.com MySecurePassword123
+```
