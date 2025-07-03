@@ -11,7 +11,7 @@ The memory bank has been updated with the comprehensive project plan from the `.
 - User Interface features
 - Core Messaging & Chat features
 - UI/UX, Animations & Mobile Experience details
-- PWA & Offline Capabilities
+- PWA & Offline Capabilities (removed)
 - Technical Infrastructure & Performance details
 - Security features
 - Consolidated Implementation Phases & Tasks (High-Level Project Roadmap)
@@ -29,7 +29,7 @@ The next task is to implement the Message Status System, which is Task 5 in Phas
 - Next.js with App Router, TypeScript, Tailwind CSS.
 - Turbopack as the build system.
 - Supabase for backend (PostgreSQL, Realtime, Auth).
-- Serwist for PWA capabilities.
+- PWA features removed; Serwist no longer used.
 - Modular component structure.
 - Optimistic UI updates.
 

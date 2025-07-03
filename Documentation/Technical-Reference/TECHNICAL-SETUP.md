@@ -15,7 +15,7 @@ Complete technical specifications and configuration guide for the Instagram DM r
 - **Styling**: Tailwind CSS + Custom Instagram Design System  
 - **Backend**: Supabase (PostgreSQL + Realtime + Auth)
 - **Animations**: CSS transitions + Custom easing curves
-- **PWA**: next-pwa for offline support
+- **PWA**: Removed; offline support currently not implemented
 - **Deployment**: Vercel
 
 ## 🗄️ Database Schema (Supabase)

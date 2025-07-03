@@ -40,7 +40,6 @@ const nextConfig: NextConfig = {
     // Optimize package imports for better tree shaking
     optimizePackageImports: [
       '@supabase/supabase-js',
-      'lucide-react',
       'react-hot-toast',
     ],
   },

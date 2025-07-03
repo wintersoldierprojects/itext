@@ -5,7 +5,7 @@
 -   **Build System**: Turbopack (configured for optimal performance and compatibility).
 -   **Styling**: Tailwind CSS, adhering to a custom Instagram Design System.
 -   **Backend**: Supabase (PostgreSQL for database, Realtime for messaging, Auth for authentication).
--   **PWA**: Serwist (modern Workbox fork) for offline capabilities, caching, and push notifications.
+-   **PWA**: Removed; offline capabilities no longer maintained.
 
 ## Backend & Database (Supabase) (from 07_Tech_Infrastructure.md)
 -   **Feature**: Robust Database Schema.
