@@ -27,16 +27,8 @@
 **Purpose**: Elite MCP orchestration and universal development methodology
 - `ELITE-DEVELOPER-ORCHESTRATION-FRAMEWORK.md` - Complete MCP automation framework with 10+ servers
 
-**Cross-References**: Technical-Reference/, Session-Tracking/
+**Cross-References**: Technical-Reference/
 
-### 📊 **Session-Tracking/**
-**Purpose**: Active development logs, debugging traces, and real-time analysis
-- `debugging-logs/` - Session-specific debugging information
-- `mcp-analysis/` - MCP server analysis and integration research  
-- `file-structure-goals.md` - Documentation organization goals
-- `post-clear-summary.md` - Session state summaries
-
-**Cross-References**: Development-Framework/, Project-Management/progress.md
 
 ### 💾 **Memory-Context/**
 **Purpose**: Product context, user requirements, and business logic
@@ -64,8 +56,6 @@
 ### **New Document Placement Rules**:
 - **Progress updates** → `Project-Management/`
 - **Technical guides** → `Technical-Reference/`
-- **MCP research** → `Session-Tracking/mcp-analysis/`
-- **Debug logs** → `Session-Tracking/debugging-logs/`
 - **Product requirements** → `Memory-Context/`
 - **Development methodology** → `Development-Framework/`
 

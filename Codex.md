@@ -26,7 +26,6 @@ Instagram DM-Style Messaging Platform - Simplified Clean Build
 2. **NEW .md files** MUST go in appropriate `Documentation/` subfolders
 3. **Cross-reference** related documents using relative paths
 4. **Legacy-Rules/** folder is READ-ONLY (historical context only)
-5. **Session files** go in `Documentation/Session-Tracking/`
 
 **Benefits**: Reduced hallucinations, improved accuracy, comprehensive context access
 
