@@ -2,12 +2,23 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { createClient } from '@/lib/supabase'
-import type { 
-  ConversationListItem, 
-  AppError, 
+import type {
+  ConversationListItem,
+  AppError,
   UseConversationsReturn,
-  RealtimeConversationPayload 
+  RealtimeConversationPayload,
+  User
 } from '@/types'
+
+interface ConversationQueryResult {
+  id: string
+  last_message_at: string | null
+  last_message_content: string | null
+  unread_count: number
+  is_active: boolean
+  user: User | null
+  admin: User | null
+}
 
 export function useConversations(userRole: 'user' | 'admin' = 'admin'): UseConversationsReturn {
   const [conversations, setConversations] = useState<ConversationListItem[]>([])
@@ -49,15 +60,16 @@ export function useConversations(userRole: 'user' | 'admin' = 'admin'): UseConve
 
       if (fetchError) throw fetchError
 
-      const formattedConversations: ConversationListItem[] = data?.map(conv => ({
-        id: conv.id,
-        user: conv.user as any,
-        admin: conv.admin as any,
-        last_message_content: conv.last_message_content,
-        last_message_at: conv.last_message_at,
-        unread_count: conv.unread_count,
-        is_active: conv.is_active
-      })) || []
+      const formattedConversations: ConversationListItem[] =
+        (data as ConversationQueryResult[] | null)?.map(conv => ({
+          id: conv.id,
+          user: conv.user,
+          admin: conv.admin,
+          last_message_content: conv.last_message_content,
+          last_message_at: conv.last_message_at,
+          unread_count: conv.unread_count,
+          is_active: conv.is_active
+        })) || []
 
       setConversations(formattedConversations)
     } catch (err) {
@@ -134,7 +146,7 @@ export function useConversations(userRole: 'user' | 'admin' = 'admin'): UseConve
             loadConversations()
           } else if (payload.eventType === 'UPDATE' && payload.new) {
             // Update existing conversation
-            const newConversation = payload.new as any
+            const newConversation = payload.new
             setConversations(prev => {
               const updated = prev.map(conv => {
                 if (conv.id === newConversation.id) {
