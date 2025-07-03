@@ -41,11 +41,80 @@ Follow these steps to effectively implement Agents.md in your projects to maximi
    - In your Agents.md file, provide clear instructions on how to run tests, what testing frameworks are used, and any specific testing requirements. This enables OpenAI Codex to generate not only functional code but also appropriate test cases.
 5. **Specify PR Guidelines**
    - For teams using OpenAI Codex in collaborative environments, include instructions about Pull Request messages, formatting, and specific information that should be included when creating PRs. This helps ensure that code contributions follow your team's workflow.
-6. **Use Shared Integration Branch**
-   - All agents must push changes to the `integration` branch sequentially.
-   - Before each update, fetch and rebase from `integration` to stay current.
+## Agent Collaboration & Safety Rules
 
----
+1. **Unique Branching**
+
+    Each agent must create and work in its own feature branch using this naming:
+    `agent-<name>/feature/<topic-or-issue>`
+
+    Never work directly in main or another agent’s branch.
+
+2. **Path Isolation**
+
+    Agents must only read/write files in their assigned folder (e.g., `scripts/agentX/**`).
+
+    Any shared or global file edits require a Pull Request (PR).
+
+3. **Automated Pull Requests**
+
+    All changes to shared files or main must go through a PR.
+
+    PRs will be auto-accepted and merged if:
+
+        They have no conflicts,
+
+        All checks/tests pass,
+
+        No other agent is modifying the same files.
+
+4. **Branch Cleanup**
+
+    After a PR is auto-merged, the feature branch should be deleted automatically.
+
+    Agents must never manually delete or force-push to shared branches.
+
+5. **Concurrency & Conflict Avoidance**
+
+    Parallel agents are allowed—provided each operates in its own branch and folder.
+
+    Do not edit or delete other agents’ files or branches.
+
+    Shared file changes must go through a PR and merge queue.
+
+6. **Commit & Review Discipline**
+
+    Keep commits atomic and related to a single task/issue.
+
+    Always rebase or update your branch before creating a PR.
+
+    If conflicts arise, resolve them locally before re-submitting.
+
+7. **Task & Archive Workflow**
+
+    When a task is complete and merged, mark it as done and archive related resources if no longer needed.
+
+**Example Workflow**
+
+    Checkout latest main
+
+    `git checkout -b agent-<name>/feature/<task>`
+
+    Work only in your assigned path
+
+    Push changes
+
+    Open a Pull Request
+
+    If no conflicts & all checks pass, PR will be auto-merged
+
+    Branch is deleted after merge
+
+**Notes:**
+
+    All agents must strictly follow these rules for safe, scalable collaboration.
+
+    Violation may result in agent disablement or code rollback.
 
 # Next.js React Redux TypeScript Development Guide
 
