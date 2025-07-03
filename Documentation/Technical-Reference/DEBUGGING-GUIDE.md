@@ -29,8 +29,6 @@ sudo lsof -t -i:3000 | xargs kill -9
 cd cherrygifts-chat
 rm -rf .next node_modules/.cache
 npm run dev
-```
-
 ### Test Turbopack (May fix Webpack issues)
 ```bash
 cd cherrygifts-chat
@@ -39,8 +37,6 @@ npm run dev -- --turbo
 
 ### Database Connection Test
 ```bash
-# Test database directly
-node scripts/debug-user.js
 
 # Check Supabase connectivity
 curl -I https://tlgiqnqdtnowmciilnba.supabase.co/rest/v1/
@@ -177,8 +173,6 @@ Problem Flow:
 
 ### Procedure B: Database Connection Test
 ```bash
-# 1. Run direct database test
-node scripts/debug-user.js
 
 # 2. Expected output:
 "✅ Users table accessible, count: [{"count":1}]"

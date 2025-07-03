@@ -747,8 +747,6 @@ TASK_EXECUTION_FRAMEWORK {
 ```bash
 cd cherrygifts-chat && npm install
 
-# Run automated test & fix system
-npx ts-node scripts/auto-test-fix.ts
 
 # Run specific test suites
 npm run test                    # All tests
