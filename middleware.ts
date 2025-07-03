@@ -156,8 +156,7 @@ export const config = {
      * - api (Next.js API routes)
      * - test (test routes)
      * - offline (PWA offline fallback)
-     * - sentry-example-page (Sentry test page)
      */
-    '/((?!_next/static|_next/image|favicon.ico|logo.png|icons|api|test|offline|sentry-example-page).*)',
+    '/((?!_next/static|_next/image|favicon.ico|logo.png|icons|api|test|offline).*)',
   ],
 }
