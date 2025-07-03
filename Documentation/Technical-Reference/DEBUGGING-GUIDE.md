@@ -28,11 +28,11 @@ sudo lsof -t -i:3000 | xargs kill -9
 # Clear cache and restart
 cd cherrygifts-chat
 rm -rf .next node_modules/.cache
-npm run dev
+yarn dev
 ### Test Turbopack (May fix Webpack issues)
 ```bash
 cd cherrygifts-chat
-npm run dev -- --turbo
+yarn dev -- --turbo
 ```
 
 ### Database Connection Test
@@ -133,13 +133,13 @@ Object.keys(window.__webpack_require__.cache).forEach(id => {
 
 **Check Build Output**:
 ```bash
-npm run build 2>&1 | grep -E "(error|Error|ERROR|fail|Failed|FAILED)"
+yarn build 2>&1 | grep -E "(error|Error|ERROR|fail|Failed|FAILED)"
 ```
 
 **Turbopack Alternative**:
 ```bash
 # Test if Turbopack fixes the issue
-npm run dev -- --turbo
+yarn dev -- --turbo
 # Monitor for same errors in console
 ```
 
@@ -186,7 +186,7 @@ Problem Flow:
 ### Procedure C: Build System Analysis
 ```bash
 # 1. Check for webpack errors
-npm run build
+yarn build
 
 # 2. Look for these warning signs:
 "Warning: Large string serialization"
@@ -194,7 +194,7 @@ npm run build
 "Build failed with errors"
 
 # 3. Test Turbopack as alternative
-npm run dev -- --turbo
+yarn dev -- --turbo
 
 # 4. Compare startup time and stability
 ```
@@ -270,7 +270,7 @@ node test-db.js
 ```bash
 # Modify package.json
 sed -i 's/"dev": "next dev"/"dev": "next dev --turbo"/' package.json
-npm run dev
+yarn dev
 ```
 
 ---

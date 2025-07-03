@@ -1,5 +1,5 @@
 // This file will be auto-generated from Supabase schema
-// Run: npx supabase gen types typescript --project-id tlgiqnqdtnowmciilnba > types/database.ts
+// Run: yarn dlx supabase gen types typescript --project-id tlgiqnqdtnowmciilnba > types/database.ts
 
 export type Json =
   | string
