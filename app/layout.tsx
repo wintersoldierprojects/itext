@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { LocalizationProvider } from "./components/LocalizationProvider";
-import { MetricsProvider } from "./components/MetricsProvider";
 import { UserStatusProvider } from "./components/UserStatusProvider";
 
 const geistSans = Geist({
@@ -69,13 +68,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-full overflow-hidden`}
       >
-        <MetricsProvider>
-          <LocalizationProvider>
-            <UserStatusProvider>
-              {children}
-            </UserStatusProvider>
-          </LocalizationProvider>
-        </MetricsProvider>
+        <LocalizationProvider>
+          <UserStatusProvider>
+            {children}
+          </UserStatusProvider>
+        </LocalizationProvider>
       </body>
     </html>
   );
