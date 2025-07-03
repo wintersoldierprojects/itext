@@ -52,7 +52,7 @@ export class ErrorBoundary extends Component<Props, State> {
       this.props.onError(error, errorInfo);
     }
 
-    // Report to error tracking service (e.g., Sentry)
+    // Report to error tracking service
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
         description: error.toString(),
