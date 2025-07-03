@@ -1,6 +1,6 @@
 # 🏰 Documentation Fortress - Organized Knowledge Base
 
-**Purpose**: Centralized, organized documentation structure for optimal Claude Code accuracy and reduced hallucinations.
+**Purpose**: Centralized, organized documentation structure for optimal project accuracy and reduced hallucinations.
 
 ## 📁 **FOLDER STRUCTURE & PURPOSE**
 
@@ -50,14 +50,15 @@
 
 **Cross-References**: Project-Management/ (current status), Technical-Reference/
 
-## 🤖 **CLAUDE CODE USAGE RULES**
+## 🤖 **CODEX CODE USAGE RULES**
 
 ### **Automatic Documentation Reading Protocol**:
-1. **Always start with**: `/CLAUDE.md` (primary guide)
-2. **For project status**: `Documentation/Project-Management/progress.md`
-3. **For technical setup**: `Documentation/Technical-Reference/TECHNICAL-SETUP.md`
-4. **For MCP automation**: `Documentation/Development-Framework/`
-5. **For debugging**: `Documentation/Technical-Reference/DEBUGGING-GUIDE.md`
+1. **Always start with**: `/Codex.md` (primary guide)
+2. **Then read**: `/AGENTS.md` (AI usage guidelines)
+3. **For project status**: `Documentation/Project-Management/progress.md`
+4. **For technical setup**: `Documentation/Technical-Reference/TECHNICAL-SETUP.md`
+5. **For MCP automation**: `Documentation/Development-Framework/`
+6. **For debugging**: `Documentation/Technical-Reference/DEBUGGING-GUIDE.md`
 
 ### **New Document Placement Rules**:
 - **Progress updates** → `Project-Management/`
@@ -94,4 +95,4 @@ Each document should reference related files using relative paths:
 
 ---
 
-**This Documentation Fortress ensures Claude Code has optimal access to organized, accurate project knowledge.**
+**This Documentation Fortress ensures AI tools have optimal access to organized, accurate project knowledge.**

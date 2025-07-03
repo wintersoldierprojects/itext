@@ -79,8 +79,6 @@
 
 ---
 
-### **5. Claude Prompts MCP** - Custom Prompt Templates
-**Location**: `https://smithery.ai/server/@minipuft/claude-prompts-mcp`  
 **Purpose**: Process custom prompt templates and slash commands
 
 #### **Available Tools**:
@@ -118,7 +116,6 @@
 ### **Current 9-MCP Capability Matrix**:
 ```
 Research & Documentation: Context7, Exa, Perplexity ✅
-Testing & Validation: Playwright, BrowserStack, Sentry ✅
 Backend & Database: Supabase ✅
 Planning & Organization: Software Planning ✅
 Problem Solving: Sequential Thinking ✅
@@ -176,7 +173,6 @@ Problem Solving: Sequential Thinking ✅
 - Data privacy considerations
 **Recommendation**: **INTEGRATE** - Essential for elite development workflows
 
-#### **4. Claude Prompts MCP** - Prompt Engineering
 **Why**: Optimize AI interactions for specific tasks
 **Benefits**:
 - Custom prompt templates for different scenarios
@@ -221,21 +217,16 @@ Problem Solving: Sequential Thinking ✅
 ### **Phase 1: Core Capability Expansion**
 ```bash
 # Add meta-access and memory
-claude mcp add smithery-toolbox npx -- -y @smithery/cli@latest run @smithery/toolbox
-claude mcp add mem0-memory npx -- -y @smithery/cli@latest run @mem0ai/mem0-memory-mcp
 ```
 
 ### **Phase 2: Task Management Upgrade**
 ```bash
 # Replace current planning with advanced task management
-claude mcp remove software-planning
-claude mcp add shrimp-task-manager npx -- -y @smithery/cli@latest run @cjo4m06/mcp-shrimp-task-manager
 ```
 
 ### **Phase 3: Optimization Tools**
 ```bash
 # Add prompt engineering for specific optimizations
-claude mcp add claude-prompts npx -- -y @smithery/cli@latest run @minipuft/claude-prompts-mcp
 ```
 
 ---
@@ -245,13 +236,11 @@ claude mcp add claude-prompts npx -- -y @smithery/cli@latest run @minipuft/claud
 ### **New Capability Matrix**:
 ```
 Research & Documentation: Context7, Exa, Perplexity ✅
-Testing & Validation: Playwright, BrowserStack, Sentry ✅
 Backend & Database: Supabase ✅
 Advanced Task Management: Shrimp Task Manager ✅ (UPGRADED)
 Problem Solving: Sequential Thinking ✅
 Memory & Learning: Mem0 Memory ✅ (NEW)
 Meta-Access: Smithery Toolbox ✅ (NEW)
-Prompt Engineering: Claude Prompts ✅ (NEW)
 ```
 
 ### **New Workflow Enhancements**:
@@ -263,7 +252,6 @@ ENHANCED_ELITE_WORKFLOW {
   Phase_1_Research: Context7 + Exa + Perplexity + Smithery_Toolbox
   Phase_2_Advanced_Planning: Shrimp_Task_Manager → "Enterprise-grade planning"
   Phase_3_Implementation: Supabase + Context7 + Memory_Storage
-  Phase_4_Testing: Playwright + BrowserStack + Sentry
   Phase_5_Learning: Mem0_Memory → "Store learnings for future projects"
 }
 ```
@@ -279,7 +267,6 @@ ENHANCED_ELITE_WORKFLOW {
 
 ### **Resulting Elite Team Configuration (11 MCPs)**:
 ```
-1. Playwright MCP - Browser testing & automation
 2. Context7 MCP - Up-to-date documentation
 3. Exa MCP - Intelligent web search & research
 4. BrowserStack MCP - Multi-device testing
