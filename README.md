@@ -1,4 +1,6 @@
-MessageYOU
+# MessageYOU
+
+[![CI](https://github.com/m3hr4d/itext/actions/workflows/ci.yml/badge.svg)](https://github.com/m3hr4d/itext/actions/workflows/ci.yml)
 
 A premium, military-grade End-to-End Encrypted messaging app inspired by WhatsApp, Telegram, and Instagram Direct—built for ultimate security, speed, and scalability.
 
